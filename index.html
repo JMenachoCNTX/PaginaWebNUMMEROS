@@ -2,705 +2,657 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NUMMEROS — Software a la medida de tu negocio</title>
-<meta name="description" content="NUMMEROS by CONTAX. Sistemas a la medida para pequeños negocios: punto de venta, contabilidad, facturación e inventario. Deja atrás el Excel, los cuadernos y las planillas.">
-<meta name="keywords" content="sistema punto de venta Bolivia, software contable, facturación, Santa Cruz, pequeños negocios">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NUMMEROS — Sistemas a la medida de tu empresa</title>
+<meta name="description" content="NUMMEROS by CONTAX. Sistemas a la medida de tu empresa: punto de venta, sistema contable y facturación. Deja atrás el Excel, los cuadernos y las planillas. Santa Cruz de la Sierra, Bolivia.">
+<meta name="keywords" content="sistema punto de venta Bolivia, sistema contable, facturación, Santa Cruz, sistemas a medida, pequeños negocios">
 <meta name="author" content="NUMMEROS by CONTAX">
 
-<!-- Open Graph (para compartir en WhatsApp, Facebook, etc.) -->
-<meta property="og:title" content="NUMMEROS — Software a la medida de tu negocio">
-<meta property="og:description" content="Sistemas simples para pequeños negocios: punto de venta, contable y facturación. Deja atrás el Excel.">
-<meta property="og:image" content="https://nummeros.contaxbolivia.com/img/logo-claro.png">
+<!-- Al compartir el link en WhatsApp, Facebook, etc. -->
+<meta property="og:title" content="NUMMEROS — Sistemas a la medida de tu empresa">
+<meta property="og:description" content="Punto de venta, sistema contable y facturación, hechos según cómo trabaja tu negocio. Deja atrás el Excel.">
+<meta property="og:image" content="https://nummeros.contaxbolivia.com/img/og-nummeros.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://nummeros.contaxbolivia.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NUMMEROS by CONTAX">
 <meta property="og:locale" content="es_BO">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NUMMEROS — Software a la medida">
-<meta name="twitter:description" content="Sistemas simples para pequeños negocios.">
-<meta name="twitter:image" content="https://nummeros.contaxbolivia.com/img/logo-claro.png">
+<meta name="twitter:title" content="NUMMEROS — Sistemas a la medida de tu empresa">
+<meta name="twitter:description" content="Punto de venta, sistema contable y facturación a la medida.">
+<meta name="twitter:image" content="https://nummeros.contaxbolivia.com/img/og-nummeros.jpg">
 
-<!-- Theme color (barra de navegador en móvil) -->
-<meta name="theme-color" content="#235347">
+<!-- Color de la barra del navegador en el celular -->
+<meta name="theme-color" content="#F4FAF5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#051F20" media="(prefers-color-scheme: dark)">
 
-<link rel="icon" href="img/favicon.png">
+<!-- Íconos (favicon y celular) -->
+<link rel="icon" href="img/marca/favicon.ico" sizes="any">
+<link rel="icon" href="img/marca/icono.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/marca/icono-180.png">
+
+<!-- Tipografías de la marca: Akshar (títulos y cifras) y Questrial (textos, gemela web de Century Gothic) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&family=Questrial&display=swap">
 
-<!-- Datos estructurados para Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "NUMMEROS by CONTAX",
-  "description": "Sistemas a la medida para pequeños negocios: punto de venta, contabilidad y facturación.",
+  "slogan": "Sistemas a la medida de tu empresa.",
+  "description": "Sistemas a la medida para empresas: punto de venta, sistema contable y facturación.",
   "url": "https://nummeros.contaxbolivia.com",
+  "logo": "https://nummeros.contaxbolivia.com/img/marca/icono-512.png",
+  "image": "https://nummeros.contaxbolivia.com/img/og-nummeros.jpg",
   "telephone": "+59169021969",
   "email": "info@contaxbolivia.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Santa Cruz de la Sierra",
-    "addressCountry": "BO"
-  },
-  "areaServed": "Bolivia"
+  "address": {"@type": "PostalAddress","addressLocality": "Santa Cruz de la Sierra","addressCountry": "BO"},
+  "areaServed": "Bolivia",
+  "parentOrganization": {"@type": "Organization","name": "CONTAX"}
 }
 </script>
 
 <style>
-  :root{
-    --g900:#051F20; --g800:#0B2B26; --g700:#163832; --g600:#235347;
-    --mint:#8EB69B; --mint50:#DAF1DE;
-    --paper:#ffffff; --soft:#f1f6f2; --line:#e2ebe4; --text:#2b3b33;
-    --muted:#5a6b62; --card:#ffffff;
-    --wa:#25d366; --maxw:1140px;
-    --font:'Jost','Century Gothic','Questrial',system-ui,sans-serif;
-    --shadow:0 12px 32px rgba(5,31,32,.08);
-    --shadow-lg:0 20px 50px rgba(5,31,32,.14);
-  }
-  /* MODO OSCURO AUTOMÁTICO */
-  @media (prefers-color-scheme: dark) {
-    :root{
-      --paper:#0a1416; --soft:#101e22; --line:#1f332c; --text:#dde8e0;
-      --muted:#9db3a6; --card:#122024;
-      --shadow:0 12px 32px rgba(0,0,0,.4);
-      --shadow-lg:0 20px 50px rgba(0,0,0,.5);
-    }
-    .nm-hdr{background:rgba(10,20,22,.92)!important}
-    .nm-mock{background:var(--card)!important;box-shadow:0 34px 70px rgba(0,0,0,.5)!important}
-    .nm-mock .line{background:var(--card);color:var(--muted)}
-    .nm-mock .kpi{background:var(--soft)}
-    .nm-mock .chart{background:var(--soft)}
-    .nm-hero{background:linear-gradient(180deg,var(--paper) 0%,var(--soft) 100%)!important}
-    .nm-system,.nm-price,.nm-rubro,.nm-c,.nm-client,.nm-module,.nm-combo,.nm-w .ic{background:var(--card)!important}
-    .nm-module{background:var(--soft)!important}
-    .nm-module:hover{background:var(--card)!important}
-    .nm-prob{background:#050f10!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .nm-story{background:linear-gradient(135deg,#081518,#050f10)!important;border:1px solid var(--line)}
-    .nm-cta{background:linear-gradient(120deg,#081518,#050f10)!important;border:1px solid var(--line)}
-    .nm-ftr{background:#050f10!important;border-top:1px solid var(--line)}
-    .nm-btn.ghost{border-color:var(--mint);color:var(--mint)}
-    .nm-btn.ghost:hover{background:var(--mint);color:var(--g900)}
-    .nm-head h2,.nm-hero h1,.nm-system h3,.nm-price h3,.nm-rubro h3,.nm-c h3,.nm-module h4,.nm-w h3,.nm-step h3{color:var(--text)}
-    .nm-head p,.nm-hero p.sub,.nm-system .desc,.nm-system ul li,.nm-price p,.nm-c a,.nm-c p,.nm-module ul li,.nm-w p,.nm-step p,.nm-rubro-more{color:var(--muted)}
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--font);color:var(--text);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
-  h1,h2,h3,h4{line-height:1.14;font-weight:600;color:var(--g800);letter-spacing:.2px}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .nm-wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  .nm-sec{padding:92px 0}
-  .nm-btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:8px;font-weight:500;font-size:.95rem;transition:.2s;cursor:pointer;border:1.5px solid transparent;letter-spacing:.3px}
-  .nm-btn.pri{background:var(--g700);color:#fff}.nm-btn.pri:hover{background:var(--g800)}
-  .nm-btn.ghost{border-color:var(--g600);color:var(--g700)}.nm-btn.ghost:hover{background:var(--g700);color:#fff}
-  .nm-btn.wa{background:var(--wa);color:#fff}.nm-btn.wa:hover{filter:brightness(.93)}
-  .nm-btn.mint{background:var(--mint);color:var(--g900)}.nm-btn.mint:hover{filter:brightness(1.05)}
-  .nm-btn.full{width:100%;justify-content:center}
-  .nm-head{max-width:660px;margin-bottom:54px}
-  .nm-head .lead{font-size:.8rem;color:var(--g600);font-weight:600;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase}
-  .nm-head h2{font-size:2.2rem;margin-bottom:14px}
-  .nm-head p{color:var(--muted);font-size:1.05rem}
-  .nm-head.mid{margin-left:auto;margin-right:auto;text-align:center}
-  .nm-badge{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.8px;background:var(--mint50);color:var(--g600);padding:4px 10px;border-radius:20px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
-  @media (prefers-color-scheme: dark){.nm-badge{background:rgba(142,182,155,.2);color:var(--mint)}}
+/* Tipografías guardadas en la carpeta fonts/ (si no cargan, se usan las de Google Fonts) */
+@font-face{font-family:"Akshar";font-weight:600;font-display:swap;src:url(fonts/Akshar-600.woff2) format("woff2")}
+@font-face{font-family:"Akshar";font-weight:700;font-display:swap;src:url(fonts/Akshar-700.woff2) format("woff2")}
+@font-face{font-family:"Questrial";font-weight:400;font-display:swap;src:url(fonts/Questrial-400.woff2) format("woff2")}
+/* Diseño: manual de marca NUMMEROS v1.1. Fondo claro (#F4FAF5) con secciones alternadas en blanco y menta;
+   verde noche solo en modo oscuro. Akshar para títulos y cifras, Century Gothic / Questrial para textos.
+   Fotos: los clásicos de los números, siempre con su nombre. Ilustración: pantallas del sistema. */
+:root{
+  /* Seis verdes de la marca */
+  --verde-950:#051F20; --verde-900:#0B2B26; --verde-800:#163832; --verde-700:#235347; --verde-300:#8EB69B; --verde-100:#DAF1DE;
+  /* Colores con función (nummeros-tokens.css) */
+  --fondo:#F4FAF5; --superficie:#FFFFFF; --campo:#EEF7F0; --borde:#DAF1DE; --borde-control:#6F9A7D;
+  --texto:#163832; --texto-suave:#557363; --acento:#235347; --sobre-acento:#FFFFFF;
+  --menta:#DAF1DE; --menta-fuerte:#C7E6CE; --etiqueta:rgba(255,255,255,.9); --error:#B42318;
+  --sombra:0 1px 2px rgba(5,31,32,.08); --sombra-alta:0 18px 44px rgba(5,31,32,.10);
+  /* Tipografía */
+  --font-display:Akshar,"Arial Narrow",sans-serif;
+  --font-texto:"Century Gothic",Questrial,"Avenir Next",sans-serif;
+  /* Espacios y radios */
+  --radio-sm:6px; --radio-md:10px; --radio-lg:16px; --radio-pill:999px;
+  --ancho:1140px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fondo:#051F20; --superficie:#0B2B26; --campo:#163832; --borde:#235347; --borde-control:#8EB69B;
+  --texto:#DAF1DE; --texto-suave:#8EB69B; --acento:#8EB69B; --sobre-acento:#051F20;
+  --menta:#0B2B26; --menta-fuerte:#163832; --etiqueta:rgba(5,31,32,.88); --error:#F97066;
+  --sombra:none; --sombra-alta:none; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fondo:#051F20; --superficie:#0B2B26; --campo:#163832; --borde:#235347; --borde-control:#8EB69B;
+  --texto:#DAF1DE; --texto-suave:#8EB69B; --acento:#8EB69B; --sobre-acento:#051F20;
+  --menta:#0B2B26; --menta-fuerte:#163832; --etiqueta:rgba(5,31,32,.88); --error:#F97066;
+  --sombra:none; --sombra-alta:none; color-scheme:dark}
 
-  /* NAV */
-  .nm-hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nm-nav{display:flex;align-items:center;justify-content:space-between;height:78px}
-  .nm-nav .logo{height:42px;width:auto}
-  .nm-links{display:flex;align-items:center;gap:24px}
-  .nm-links a{font-size:.93rem;color:var(--text)}.nm-links a:hover{color:var(--g700)}
-  .nm-links .nm-btn{color:#fff;padding:10px 20px}
-  .nm-burger{display:none;background:none;border:0;cursor:pointer;color:var(--g800)}
+/* Logo correcto según el modo: verde principal en claro, verde claro en oscuro */
+.solo-oscuro{display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .solo-claro{display:none!important}:root:not([data-theme="light"]) .solo-oscuro{display:block!important}}
+:root[data-theme="dark"] .solo-claro{display:none!important}
+:root[data-theme="dark"] .solo-oscuro{display:block!important}
 
-  /* HERO */
-  .nm-hero{background:linear-gradient(180deg,var(--paper) 0%,var(--soft) 100%);overflow:hidden}
-  .nm-hero .nm-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:80px 24px 88px}
-  .nm-tag{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.5px;color:var(--g600);background:var(--mint50);padding:6px 14px;border-radius:20px;margin-bottom:20px}
-  @media (prefers-color-scheme: dark){.nm-tag{background:rgba(142,182,155,.2);color:var(--mint)}}
-  .nm-hero h1{font-size:3rem;font-weight:600;margin-bottom:20px;line-height:1.08}
-  .nm-hero p.sub{font-size:1.15rem;color:var(--muted);max-width:510px;margin-bottom:32px}
-  .nm-hero .ctas{display:flex;gap:13px;flex-wrap:wrap}
-  .nm-mock{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);overflow:hidden;max-width:440px;margin-left:auto}
-  .nm-mock .bar{background:var(--g800);height:38px;display:flex;align-items:center;gap:6px;padding:0 14px}
-  .nm-mock .bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);display:block}
-  .nm-mock .body{display:grid;grid-template-columns:62px 1fr;min-height:250px}
-  .nm-mock .side{background:var(--g700);padding:16px 10px;display:flex;flex-direction:column;gap:14px;align-items:center}
-  .nm-mock .side span{width:26px;height:6px;border-radius:3px;background:rgba(255,255,255,.25)}
-  .nm-mock .side span.on{background:var(--mint)}
-  .nm-mock .main{padding:18px}
-  .nm-mock .kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-  .nm-mock .kpi{background:var(--soft);border-radius:9px;padding:10px 12px}
-  .nm-mock .kpi .t{font-size:.62rem;color:var(--muted);letter-spacing:.5px}
-  .nm-mock .kpi .v{font-size:1.1rem;font-weight:600;color:var(--g800)}
-  @media (prefers-color-scheme: dark){.nm-mock .kpi .v{color:var(--text)}}
-  .nm-mock .chart{display:flex;align-items:flex-end;gap:7px;height:70px;padding:8px;background:var(--soft);border-radius:9px;margin-bottom:12px}
-  .nm-mock .chart b{flex:1;background:var(--g600);border-radius:3px 3px 0 0;display:block}
-  .nm-mock .chart b:nth-child(5){background:var(--mint)}
-  .nm-mock .line{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--muted);padding:8px 10px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
-  .nm-mock .line .ok{color:#15803d;font-weight:600}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:var(--font-texto);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--texto);margin:0;line-height:1.08;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block;height:auto}
+:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.wrap{max-width:var(--ancho);margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+.sec{padding-block:clamp(64px,8vw,96px)}
+.sec.blanco{background:var(--superficie)}
+.sec.menta{background:var(--menta)}
+.cifra,.num{font-family:var(--font-display);font-variant-numeric:tabular-nums}
 
-  /* PROBLEM */
-  .nm-prob{background:var(--g800);color:#dbe7df}
-  .nm-prob h2{color:#fff;font-size:1.95rem;margin-bottom:26px;max-width:620px}
-  .nm-old{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
-  .nm-old span{font-size:.95rem;color:#aec4b8;border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:9px 18px;text-decoration:line-through;text-decoration-color:var(--mint);text-decoration-thickness:2px}
-  .nm-prob .sol{font-size:1.3rem;color:var(--mint);font-weight:500;display:flex;align-items:center;gap:12px}
+/* Encabezados de sección */
+.cab{max-width:640px;margin-bottom:44px;display:grid;gap:12px}
+.cab.centro{margin-inline:auto;text-align:center}
+.kicker{font:600 13px/1 var(--font-display);letter-spacing:.14em;text-transform:uppercase;color:var(--acento)}
+.cab h2{font-size:clamp(34px,4.6vw,48px);font-weight:700}
+.cab p{color:var(--texto-suave);font-size:1.06rem}
 
-  /* SYSTEMS */
-  .nm-systems{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .nm-system{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px 30px;transition:.22s;position:relative;overflow:hidden}
-  .nm-system::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--g600)}
-  .nm-system.dev::before{background:var(--mint)}
-  .nm-system:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
-  .nm-system .ic{width:56px;height:56px;border-radius:14px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-  @media (prefers-color-scheme: dark){.nm-system .ic{background:rgba(142,182,155,.15)}}
-  .nm-system h3{font-size:1.3rem;margin-bottom:6px;display:flex;align-items:center;flex-wrap:wrap}
-  .nm-system .desc{font-size:.95rem;color:var(--muted);margin-bottom:20px}
-  .nm-system ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .nm-system ul li{font-size:.9rem;color:var(--text);display:flex;align-items:flex-start;gap:9px}
-  .nm-system ul li::before{content:"";flex-shrink:0;width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--mint50);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23235347' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8l3 3 7-7'/></svg>");background-size:12px;background-position:center;background-repeat:no-repeat}
-  @media (prefers-color-scheme: dark){.nm-system ul li::before{background-color:rgba(142,182,155,.2);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%238EB69B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8l3 3 7-7'/></svg>")}}
-  .nm-system .foot{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.85rem;color:var(--g600);font-weight:500}
-  @media (prefers-color-scheme: dark){.nm-system .foot{color:var(--mint)}}
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1.5px solid transparent;border-radius:var(--radio-md);padding:12px 22px;font:600 17px/1.2 var(--font-display);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn.pri{background:var(--acento);color:var(--sobre-acento)}
+.btn.pri:hover{background:var(--verde-800)}
+:root[data-theme="dark"] .btn.pri:hover{background:var(--verde-100)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.pri:hover{background:var(--verde-100)}}
+.btn.sec2{border-color:var(--borde-control);color:var(--texto);background:transparent}
+.btn.sec2:hover{background:var(--campo)}
+.btn.full{width:100%}
+.btn svg{flex:none}
 
-  .nm-bg{background:var(--soft)}
+/* Insignia */
+.badge{display:inline-block;font:600 11px/1 var(--font-display);letter-spacing:.1em;text-transform:uppercase;background:var(--menta);color:var(--acento);padding:6px 10px;border-radius:var(--radio-pill);vertical-align:middle}
+.sec.menta .badge{background:var(--superficie)}
 
-  /* COMBO */
-  .nm-combo{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:44px 36px;box-shadow:var(--shadow)}
-  .nm-combo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
-  .nm-module{background:var(--soft);border-radius:14px;padding:24px 22px;border:2px solid transparent;transition:.2s}
-  .nm-module:hover{border-color:var(--mint);background:var(--card)}
-  .nm-module h4{font-size:1rem;font-weight:600;color:var(--g800);margin-bottom:14px;display:flex;align-items:center;gap:9px}
-  @media (prefers-color-scheme: dark){.nm-module h4{color:var(--text)}}
-  .nm-module h4 .dot{width:10px;height:10px;border-radius:50%;background:var(--g600);flex-shrink:0}
-  .nm-module.dev h4 .dot{background:var(--mint)}
-  .nm-module ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-  .nm-module ul li{font-size:.85rem;color:var(--muted);display:flex;gap:7px;align-items:flex-start}
-  .nm-module ul li::before{content:"✓";color:var(--g600);font-weight:700;font-size:.9rem;line-height:1.2}
-  @media (prefers-color-scheme: dark){.nm-module ul li::before{color:var(--mint)}}
-  .nm-combo-msg{text-align:center;padding-top:26px;border-top:1px dashed var(--line)}
-  .nm-combo-msg p{font-size:1rem;color:var(--muted);margin-bottom:20px}
-  .nm-combo-msg .combos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-  .nm-combo-msg .combos span{font-size:.85rem;font-weight:500;color:var(--g700);background:var(--mint50);padding:8px 16px;border-radius:24px}
-  @media (prefers-color-scheme: dark){.nm-combo-msg .combos span{background:rgba(142,182,155,.15);color:var(--mint)}}
+/* ===== ENCABEZADO ===== */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--fondo) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--borde)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.nav .logo img{height:44px;width:auto}
+.links{display:flex;align-items:center;gap:6px}
+.links a{font:600 16px/1 var(--font-display);text-decoration:none;color:var(--texto-suave);padding:9px 11px;border-radius:var(--radio-sm)}
+.links a:hover{color:var(--texto);background:var(--campo)}
+.links a.btn{color:var(--sobre-acento);padding:11px 18px;margin-left:6px}
+.links a.btn:hover{color:var(--sobre-acento)}
+.herr{display:flex;align-items:center;gap:6px}
+.modo,.burger{border:1px solid var(--borde);background:var(--superficie);color:var(--texto);border-radius:var(--radio-sm);height:38px;min-width:38px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.burger{display:none}
 
-  /* RUBROS */
-  .nm-rubros{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .nm-rubro{text-align:center;padding:34px 20px;background:var(--card);border:1px solid var(--line);border-radius:14px;transition:.22s}
-  .nm-rubro:hover{border-color:var(--mint);box-shadow:var(--shadow);transform:translateY(-3px)}
-  .nm-rubro .ic{width:52px;height:52px;border-radius:13px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-  @media (prefers-color-scheme: dark){.nm-rubro .ic{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-rubro h3{font-size:1rem;margin-bottom:5px}
-  .nm-rubro p{font-size:.83rem;color:var(--muted)}
-  .nm-rubro-more{text-align:center;margin-top:28px;font-size:.95rem;color:var(--muted);font-style:italic}
+/* ===== PORTADA ===== */
+.hero{border-bottom:1px solid var(--borde);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:center;padding-block:64px 72px}
+.hero h1{font-size:clamp(48px,6.6vw,84px);font-weight:700;line-height:.95;letter-spacing:.005em;margin:18px 0 22px}
+.hero .sub{font-size:1.15rem;color:var(--texto-suave);max-width:520px;margin-bottom:30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.firma{font-size:14px;color:var(--texto-suave)}
+.firma b{font-family:var(--font-display);font-weight:600;letter-spacing:.06em;color:var(--texto)}
+.datos{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:16px 32px;margin-top:36px;padding-top:24px;border-top:1px solid var(--borde)}
+.datos div{display:grid;gap:2px}
+.datos b{font:700 28px/1 var(--font-display);color:var(--texto);font-variant-numeric:tabular-nums}
+.datos span{font-size:13px;color:var(--texto-suave)}
 
-  /* CÓMO FUNCIONA */
-  .nm-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative}
-  .nm-flow-item{text-align:center;padding:24px 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;position:relative;transition:.22s}
-  .nm-flow-item:hover{border-color:var(--mint);transform:translateY(-3px)}
-  .nm-flow-item .num{width:32px;height:32px;border-radius:50%;background:var(--g700);color:#fff;font-weight:600;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-  .nm-flow-item .ic{width:40px;height:40px;color:var(--g600);margin:0 auto 10px;display:flex;align-items:center;justify-content:center}
-  @media (prefers-color-scheme: dark){.nm-flow-item .ic{color:var(--mint)}}
-  .nm-flow-item h4{font-size:.92rem;margin-bottom:6px}
-  .nm-flow-item p{font-size:.8rem;color:var(--muted)}
+/* Foto de los clásicos con su nombre (regla del manual: siempre visible) */
+.foto{position:relative;margin:0;border-radius:var(--radio-lg);overflow:hidden;background:#E6F2E9}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto .nombre{position:absolute;left:14px;bottom:14px;background:var(--etiqueta);backdrop-filter:blur(6px);border-radius:var(--radio-md);padding:9px 14px;display:grid;gap:1px;max-width:calc(100% - 28px)}
+.foto .nombre b{font:700 20px/1 var(--font-display);color:var(--texto)}
+.foto .nombre span{font-size:12px;color:var(--texto-suave)}
+.hero .foto{aspect-ratio:928/1060;max-width:480px;margin-left:auto;width:100%}
+.hero .foto img{object-position:50% 0}
 
-  /* ANTES VS DESPUÉS */
-  .nm-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .nm-compare-card{border-radius:16px;padding:36px 32px;border:1px solid var(--line)}
-  .nm-compare-card.before{background:rgba(200,80,80,.06);border-color:rgba(200,80,80,.2)}
-  .nm-compare-card.after{background:rgba(35,83,71,.06);border-color:rgba(35,83,71,.25)}
-  @media (prefers-color-scheme: dark){
-    .nm-compare-card.before{background:rgba(200,80,80,.08)}
-    .nm-compare-card.after{background:rgba(142,182,155,.08);border-color:rgba(142,182,155,.25)}
-  }
-  .nm-compare-card h3{font-size:1.3rem;margin-bottom:22px;display:flex;align-items:center;gap:12px}
-  .nm-compare-card.before h3{color:#a03030}
-  .nm-compare-card.after h3{color:var(--g700)}
-  @media (prefers-color-scheme: dark){
-    .nm-compare-card.before h3{color:#e88a8a}
-    .nm-compare-card.after h3{color:var(--mint)}
-  }
-  .nm-compare-card .em{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .nm-compare-card.before .em{background:rgba(200,80,80,.15);color:#a03030}
-  .nm-compare-card.after .em{background:rgba(35,83,71,.12);color:var(--g700)}
-  @media (prefers-color-scheme: dark){
-    .nm-compare-card.before .em{color:#e88a8a}
-    .nm-compare-card.after .em{background:rgba(142,182,155,.15);color:var(--mint)}
-  }
-  .nm-compare-card ul{list-style:none;display:flex;flex-direction:column;gap:14px}
-  .nm-compare-card li{font-size:.95rem;color:var(--text);display:flex;gap:12px;align-items:flex-start}
-  .nm-compare-card.before li::before{content:"✕";color:#c05050;font-weight:700;flex-shrink:0}
-  .nm-compare-card.after li::before{content:"✓";color:#2e8b57;font-weight:700;flex-shrink:0}
+/* ===== ANTES (problema) ===== */
+.prob .wrap{display:grid;gap:26px}
+.prob h2{font-size:clamp(30px,4vw,40px);font-weight:700}
+.viejo{display:flex;flex-wrap:wrap;gap:10px}
+.viejo span{font-size:.98rem;color:var(--texto-suave);border:1px solid var(--borde-control);border-radius:var(--radio-pill);padding:8px 16px;text-decoration:line-through;text-decoration-color:var(--acento);text-decoration-thickness:2px}
+.prob .sol{font:600 clamp(22px,2.6vw,28px)/1.2 var(--font-display);color:var(--acento);display:flex;align-items:center;gap:12px}
 
-  /* CLIENTES */
-  .nm-clients{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:center}
-  .nm-client{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:120px;transition:.22s;text-align:center}
-  .nm-client:hover{border-color:var(--mint);box-shadow:var(--shadow)}
-  .nm-client img{max-height:46px;width:auto;object-fit:contain}
-  .nm-client span{font-size:.78rem;font-weight:600;color:var(--g700);letter-spacing:.3px;line-height:1.25}
-  @media (prefers-color-scheme: dark){.nm-client span{color:var(--mint)}}
+/* ===== TARJETAS GENERALES ===== */
+.tarjeta{background:var(--superficie);border:1px solid var(--borde);border-radius:var(--radio-lg);box-shadow:var(--sombra);min-width:0}
+.sec.blanco .tarjeta{background:var(--fondo)}
 
-  /* WHY */
-  .nm-why{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 46px}
-  .nm-w{display:flex;gap:16px}
-  .nm-w .ic{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:var(--g700);color:#fff;display:flex;align-items:center;justify-content:center}
-  .nm-w h3{font-size:1.1rem;margin-bottom:6px}
-  .nm-w p{font-size:.95rem;color:var(--muted)}
+/* Íconos en relieve (manual: círculo en relieve, sombra larga en diagonal, filo de luz) */
+.relieve{display:block;width:76px;height:76px;border-radius:18px;overflow:hidden;flex:none}
+.relieve svg{display:block;width:100%;height:100%}
+.relieve.xl{width:150px;height:150px;border-radius:28px}
 
-  /* NOSOTROS / STORY + MISION VISION VALORES */
-  .nm-story-wrap{background:linear-gradient(135deg,var(--g800),var(--g900));color:#dbe7df;border-radius:20px;padding:56px 52px;position:relative;overflow:hidden;margin-bottom:32px}
-  .nm-story-wrap::after{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:rgba(142,182,155,.08)}
-  .nm-story-wrap .lead{font-size:.8rem;color:var(--mint);font-weight:600;letter-spacing:1.5px;margin-bottom:16px;text-transform:uppercase}
-  .nm-story-wrap h2{color:#fff;font-size:2rem;margin-bottom:22px;max-width:560px}
-  .nm-story-wrap p{font-size:1.05rem;color:#c4d6c9;margin-bottom:14px;max-width:720px;position:relative;z-index:1}
-  .nm-story-wrap strong{color:#fff;font-weight:600}
-  .nm-story-wrap .sign{margin-top:26px;font-size:.95rem;color:var(--mint);font-weight:500;letter-spacing:.5px}
-  .nm-mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .nm-mvv-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 28px}
-  .nm-mvv-card .ic{width:48px;height:48px;border-radius:12px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  @media (prefers-color-scheme: dark){.nm-mvv-card .ic{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-mvv-card h3{font-size:1.15rem;margin-bottom:12px}
-  .nm-mvv-card p{font-size:.92rem;color:var(--muted)}
-  .nm-mvv-card ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin-top:8px}
-  .nm-mvv-card ul li{font-size:.9rem;color:var(--text);padding-left:20px;position:relative}
-  .nm-mvv-card ul li::before{content:"•";color:var(--g600);font-weight:700;position:absolute;left:6px;top:0}
-  @media (prefers-color-scheme: dark){.nm-mvv-card ul li::before{color:var(--mint)}}
+/* ===== SISTEMAS ===== */
+.sistemas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.sistema{padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.sistema h3{font-size:28px;font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sistema .desc{color:var(--texto-suave)}
+.check{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:9px}
+.check li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem}
+.check li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--menta) no-repeat center/12px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23235347' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8l3 3 7-7'/></svg>")}
+.sec.blanco .check li::before{background-color:var(--menta)}
+.sistema .pie{margin-top:auto;padding-top:18px;border-top:1px solid var(--borde);font-size:.9rem;color:var(--acento)}
 
-  /* PROCESO */
-  .nm-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-  .nm-step .num{font-size:2rem;font-weight:700;color:var(--mint);line-height:1}
-  .nm-step h3{font-size:1.08rem;margin:12px 0 7px}
-  .nm-step p{font-size:.9rem;color:var(--muted)}
+/* ===== ARMA TU SISTEMA ===== */
+.combo{padding:clamp(24px,4vw,40px)}
+.modulos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:30px}
+.modulo{background:var(--campo);border-radius:var(--radio-lg);padding:22px;border:1.5px solid transparent;transition:border-color .2s}
+.modulo:hover{border-color:var(--verde-300)}
+.modulo h4{font-size:22px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.modulo h4 i{width:12px;height:12px;border-radius:3px;background:var(--acento);transform:skewX(-20deg)}
+.modulo.dev h4 i{background:var(--verde-300)}
+.modulo ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:.92rem;color:var(--texto-suave)}
+.combos{text-align:center;padding-top:24px;border-top:1px dashed var(--borde-control);display:grid;gap:16px;justify-items:center}
+.combos p{color:var(--texto-suave)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.pills span{font:600 15px/1 var(--font-display);color:var(--acento);background:var(--menta);padding:9px 14px;border-radius:var(--radio-pill)}
 
-  /* PRECIOS */
-  .nm-prices{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:32px}
-  .nm-price{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 24px;text-align:center;transition:.22s}
-  .nm-price:hover{border-color:var(--mint);box-shadow:var(--shadow);transform:translateY(-3px)}
-  .nm-price .ic{width:46px;height:46px;border-radius:11px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-  @media (prefers-color-scheme: dark){.nm-price .ic{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-price h3{font-size:1rem;margin-bottom:8px}
-  .nm-price p{font-size:.85rem;color:var(--muted)}
-  .nm-price .tag{font-size:.75rem;font-weight:600;color:var(--g600);letter-spacing:.5px;margin-top:10px;display:block}
-  @media (prefers-color-scheme: dark){.nm-price .tag{color:var(--mint)}}
-  .nm-price-note{background:var(--mint50);border-radius:12px;padding:22px 26px;text-align:center;font-size:.98rem;color:var(--g700);margin-bottom:32px}
-  @media (prefers-color-scheme: dark){.nm-price-note{background:rgba(142,182,155,.12);color:var(--mint)}}
-  .nm-price-note strong{color:var(--g800)}
-  @media (prefers-color-scheme: dark){.nm-price-note strong{color:var(--text)}}
-  .nm-price-cta{text-align:center}
+/* ===== PANTALLAS DEL SISTEMA / CÓMO FUNCIONA ===== */
+.como-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:40px}
+.como-top .cab{margin-bottom:0}
+.como-top .foto{aspect-ratio:16/9}
+.pantallas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.pantalla{overflow:hidden;display:flex;flex-direction:column}
+.pantalla .lienzo{background:var(--campo);display:grid;place-items:center;padding:8px}
+.pantalla .lienzo svg{width:100%;height:auto;display:block;max-width:260px}
+.pantalla .txt{padding:18px 20px 22px;display:grid;gap:6px}
+.pantalla .paso{font:600 12px/1 var(--font-display);letter-spacing:.12em;text-transform:uppercase;color:var(--acento)}
+.pantalla h3{font-size:22px;font-weight:600}
+.pantalla p{font-size:.92rem;color:var(--texto-suave)}
 
-  /* SEGURIDAD */
-  .nm-secure{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-  .nm-secure h2{font-size:2rem;margin-bottom:18px}
-  .nm-secure p{font-size:1rem;color:var(--muted);margin-bottom:22px}
-  .nm-secure-list{list-style:none;display:flex;flex-direction:column;gap:14px}
-  .nm-secure-list li{display:flex;gap:12px;font-size:.95rem;color:var(--text)}
-  .nm-secure-list li::before{content:"✓";color:#2e8b57;font-weight:700;flex-shrink:0;font-size:1.05rem}
-  .nm-secure-visual{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:40px;text-align:center;box-shadow:var(--shadow)}
-  .nm-secure-visual .shield{width:80px;height:80px;border-radius:50%;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
-  @media (prefers-color-scheme: dark){.nm-secure-visual .shield{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-secure-visual h3{font-size:1.2rem;margin-bottom:10px}
-  .nm-secure-visual p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+/* ===== ANTES Y DESPUÉS ===== */
+.compara{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.compara .tarjeta{padding:32px 30px}
+.compara h3{font-size:30px;font-weight:700;margin-bottom:20px}
+.compara ul{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+.compara li{display:flex;gap:12px;align-items:flex-start}
+.antes{background:transparent!important;border-style:dashed!important;border-color:var(--borde-control)!important;box-shadow:none!important}
+.antes h3,.antes li{color:var(--texto-suave)}
+.antes li::before{content:"×";font:700 20px/1.1 var(--font-display);color:var(--texto-suave);flex:none;width:18px;text-align:center}
+.despues{border-color:var(--verde-300)!important}
+.despues li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--acento) no-repeat center/12px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M3 8l3 3 7-7'/></svg>")}
 
-  /* PRÓXIMAS FUNCIONES */
-  .nm-next{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .nm-next-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 26px;position:relative;overflow:hidden}
-  .nm-next-card::before{content:"PRÓXIMAMENTE";position:absolute;top:14px;right:-32px;background:var(--mint);color:var(--g900);font-size:.65rem;font-weight:700;letter-spacing:.8px;padding:4px 40px;transform:rotate(38deg)}
-  .nm-next-card .ic{width:48px;height:48px;border-radius:12px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  @media (prefers-color-scheme: dark){.nm-next-card .ic{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-next-card h3{font-size:1.1rem;margin-bottom:8px}
-  .nm-next-card p{font-size:.9rem;color:var(--muted)}
+/* ===== RUBROS ===== */
+.rubros{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.rubro{padding:24px 20px;display:grid;gap:8px;align-content:start}
+.rubro .ic{width:46px;height:46px;border-radius:12px;background:var(--menta);color:var(--acento);display:grid;place-items:center;margin-bottom:6px}
+.sec.blanco .rubro .ic{background:var(--menta)}
+.rubro h3{font-size:21px;font-weight:600}
+.rubro p{font-size:.88rem;color:var(--texto-suave)}
 
-  /* FAQ */
-  .nm-faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-  .nm-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;transition:.2s;overflow:hidden}
-  .nm-faq details[open]{border-color:var(--mint);box-shadow:var(--shadow)}
-  .nm-faq summary{padding:20px 24px;font-size:1rem;font-weight:500;color:var(--g800);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-  @media (prefers-color-scheme: dark){.nm-faq summary{color:var(--text)}}
-  .nm-faq summary::-webkit-details-marker{display:none}
-  .nm-faq summary::after{content:"+";font-size:1.6rem;font-weight:300;color:var(--g600);transition:transform .2s;flex-shrink:0;line-height:1}
-  @media (prefers-color-scheme: dark){.nm-faq summary::after{color:var(--mint)}}
-  .nm-faq details[open] summary::after{transform:rotate(45deg)}
-  .nm-faq .ans{padding:0 24px 22px;font-size:.95rem;color:var(--muted);line-height:1.7}
+/* ===== CLIENTES ===== */
+.clientes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.cliente{padding:22px 14px;min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.cliente img{max-height:46px;width:auto;object-fit:contain}
+.cliente b{font:600 18px/1.1 var(--font-display);color:var(--texto)}
+.cliente span{font-size:12px;color:var(--texto-suave)}
 
-  /* CTA */
-  .nm-cta{background:linear-gradient(120deg,var(--g800),var(--g900));border-radius:18px;padding:56px 48px;text-align:center}
-  .nm-cta h2{color:#fff;font-size:2rem;margin-bottom:12px}
-  .nm-cta p{color:#aec4b8;max-width:560px;margin:0 auto 28px}
+/* ===== LOS CLÁSICOS ===== */
+.clasicos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.clasico{overflow:hidden;display:flex;flex-direction:column}
+.clasico .foto{border-radius:0;aspect-ratio:928/980}
+.clasico .foto img{object-position:50% 10%}
+.clasico .txt{padding:20px 22px 24px;display:grid;gap:8px}
+.clasico .rol{font:600 12px/1 var(--font-display);letter-spacing:.12em;text-transform:uppercase;color:var(--acento)}
+.clasico h3{font-size:24px;font-weight:600}
+.clasico p{font-size:.94rem;color:var(--texto-suave)}
 
-  /* CONTACTO + FORM */
-  .nm-contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
-  .nm-form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px 32px;box-shadow:var(--shadow)}
-  .nm-form h3{font-size:1.3rem;margin-bottom:8px}
-  .nm-form .sub{font-size:.92rem;color:var(--muted);margin-bottom:24px}
-  .nm-field{margin-bottom:16px}
-  .nm-field label{display:block;font-size:.85rem;font-weight:500;color:var(--text);margin-bottom:6px}
-  .nm-field input,.nm-field select,.nm-field textarea{width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);background:var(--paper);color:var(--text);font-family:inherit;font-size:.92rem;transition:.2s;outline:none}
-  .nm-field input:focus,.nm-field select:focus,.nm-field textarea:focus{border-color:var(--g600);box-shadow:0 0 0 3px rgba(35,83,71,.1)}
-  @media (prefers-color-scheme: dark){
-    .nm-field input:focus,.nm-field select:focus,.nm-field textarea:focus{box-shadow:0 0 0 3px rgba(142,182,155,.15)}
-  }
-  .nm-field textarea{resize:vertical;min-height:100px}
-  .nm-checks{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-  .nm-checks label{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:9px;border:1.5px solid var(--line);cursor:pointer;font-size:.88rem;transition:.2s;margin:0;font-weight:400}
-  .nm-checks label:hover{border-color:var(--mint)}
-  .nm-checks input{width:auto;margin:0;accent-color:var(--g600)}
-  .nm-checks input:checked ~ span{color:var(--g700);font-weight:500}
-  @media (prefers-color-scheme: dark){.nm-checks input:checked ~ span{color:var(--mint)}}
-  .nm-contact-info{display:flex;flex-direction:column;gap:16px}
-  .nm-c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;gap:16px;align-items:flex-start}
-  .nm-c .ic{width:48px;height:48px;border-radius:12px;background:var(--mint50);color:var(--g700);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  @media (prefers-color-scheme: dark){.nm-c .ic{background:rgba(142,182,155,.15);color:var(--mint)}}
-  .nm-c h3{font-size:1rem;margin-bottom:4px}
-  .nm-c a,.nm-c p{color:var(--muted);font-size:.92rem}.nm-c a:hover{color:var(--g700)}
+/* ===== POR QUÉ ===== */
+.porque{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.razon{padding:24px;display:flex;gap:18px;align-items:flex-start}
+.razon h3{font-size:22px;font-weight:600;margin-bottom:6px}
+.razon p{color:var(--texto-suave);font-size:.95rem}
 
-  /* FOOTER */
-  .nm-ftr{background:var(--g900);color:#92a89b;padding:50px 0 34px}
-  .nm-foot{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
-  .nm-foot .logo-f{height:80px;width:auto}
-  .nm-foot .legal{font-size:.86rem;line-height:1.8}
-  .nm-foot a{color:#fff}
-  .nm-fb{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:20px;font-size:.82rem;color:#5f7568;text-align:center}
+/* ===== NOSOTROS ===== */
+.historia{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;margin-bottom:28px}
+.historia h2{font-size:clamp(32px,4.2vw,44px);font-weight:700;margin:12px 0 18px}
+.historia p{color:var(--texto-suave);margin-bottom:12px;max-width:62ch}
+.historia strong{color:var(--texto);font-weight:600}
+.historia .foto{aspect-ratio:1376/900}
+.contax{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;padding:16px 20px;border-radius:var(--radio-lg);background:var(--campo)}
+.contax b{font:700 24px/1 var(--font-display)}
+.contax span{font-size:13px;color:var(--texto-suave)}
+.contax .flecha{font:700 24px/1 var(--font-display);color:var(--acento)}
+.contax img{height:40px;width:auto}
+.mvv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mvv .tarjeta{padding:28px 26px;display:grid;gap:10px;align-content:start}
+.mvv h3{font-size:26px;font-weight:700}
+.mvv p{color:var(--texto-suave);font-size:.95rem}
+.valores{display:grid;gap:12px}
+.valores div{display:grid;gap:2px}
+.valores b{font:700 22px/1 var(--font-display);color:var(--acento)}
+.valores span{font-size:.92rem;color:var(--texto-suave)}
 
-  /* FABs */
-  .nm-fab{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:60;transition:.2s}
-  .nm-fab:hover{transform:translateY(-2px)}
-  .nm-chat-fab{position:fixed;left:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:var(--g700);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:60;transition:.2s;cursor:pointer;border:0;font-family:inherit}
-  .nm-chat-fab:hover{transform:translateY(-2px);background:var(--g800)}
+/* ===== PROCESO (infografía de pasos en relieve) ===== */
+.pasos-svg{border-radius:var(--radio-lg);overflow:hidden;border:1px solid var(--borde)}
+.pasos-svg svg{display:block;width:100%;height:auto}
+.pasos-lista{display:none;list-style:none;padding:0;margin:0;gap:12px}
+.pasos-lista li{display:flex;gap:16px;align-items:center;padding:16px 18px}
+.pasos-lista .n{font:700 30px/1 var(--font-display);color:var(--acento);min-width:44px;font-variant-numeric:tabular-nums}
+.pasos-lista b{font:700 21px/1.1 var(--font-display);display:block}
+.pasos-lista span{font-size:.9rem;color:var(--texto-suave)}
+.pasos-nota{margin-top:20px;color:var(--texto-suave);text-align:center;max-width:62ch;margin-inline:auto}
 
-  /* CHAT PANEL */
-  .nm-chat-panel{position:fixed;left:22px;bottom:90px;width:360px;max-width:calc(100vw - 44px);height:520px;max-height:calc(100vh - 120px);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);z-index:70;display:none;flex-direction:column;overflow:hidden}
-  .nm-chat-panel.open{display:flex}
-  .nm-chat-head{background:var(--g700);color:#fff;padding:18px 20px;display:flex;align-items:center;gap:12px}
-  .nm-chat-head .avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
-  .nm-chat-head h4{color:#fff;font-size:.98rem;margin:0;font-weight:500}
-  .nm-chat-head .status{font-size:.72rem;color:var(--mint);display:flex;align-items:center;gap:5px;margin-top:2px}
-  .nm-chat-head .status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint)}
-  .nm-chat-head .close{margin-left:auto;background:none;border:0;color:#fff;cursor:pointer;opacity:.7;font-size:1.4rem;line-height:1;padding:0;width:28px;height:28px}
-  .nm-chat-head .close:hover{opacity:1}
-  .nm-chat-body{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px;background:var(--soft)}
-  .nm-msg{max-width:82%;padding:11px 14px;border-radius:14px;font-size:.88rem;line-height:1.5;word-wrap:break-word}
-  .nm-msg.bot{background:var(--card);color:var(--text);align-self:flex-start;border-bottom-left-radius:4px;border:1px solid var(--line)}
-  .nm-msg.user{background:var(--g700);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-  .nm-chat-foot{padding:14px;border-top:1px solid var(--line);background:var(--card);display:flex;gap:8px}
-  .nm-chat-foot input{flex:1;padding:11px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);color:var(--text);font-family:inherit;font-size:.88rem;outline:none}
-  .nm-chat-foot input:focus{border-color:var(--g600)}
-  .nm-chat-foot button{background:var(--g700);color:#fff;border:0;border-radius:10px;padding:0 16px;cursor:pointer;font-family:inherit;font-weight:500;transition:.2s}
-  .nm-chat-foot button:hover{background:var(--g800)}
-  .nm-chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px 4px;background:var(--card)}
-  .nm-chat-quick button{font-size:.75rem;background:var(--soft);border:1px solid var(--line);color:var(--text);padding:6px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:.2s}
-  .nm-chat-quick button:hover{background:var(--mint50);border-color:var(--mint)}
-  @media (prefers-color-scheme: dark){.nm-chat-quick button:hover{background:rgba(142,182,155,.2)}}
-  .nm-typing{display:flex;gap:4px;padding:11px 14px;background:var(--card);border:1px solid var(--line);border-radius:14px;border-bottom-left-radius:4px;align-self:flex-start;width:fit-content}
-  .nm-typing span{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:nm-typing 1.2s infinite}
-  .nm-typing span:nth-child(2){animation-delay:.2s}
-  .nm-typing span:nth-child(3){animation-delay:.4s}
-  @keyframes nm-typing{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+/* ===== PRECIOS ===== */
+.precios{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:24px}
+.precio{padding:26px 22px;display:grid;gap:8px;align-content:start}
+.precio h3{font-size:23px;font-weight:600}
+.precio p{font-size:.9rem;color:var(--texto-suave)}
+.precio .etq{margin-top:6px;font:600 13px/1 var(--font-display);letter-spacing:.08em;text-transform:uppercase;color:var(--acento)}
+.nota{background:var(--campo);border-radius:var(--radio-lg);padding:20px 24px;text-align:center;margin-bottom:28px;color:var(--texto)}
+.nota b{font-family:var(--font-display);font-weight:600;font-size:1.08em}
+.centro{text-align:center}
 
-  @media(max-width:980px){
-    .nm-systems,.nm-prices,.nm-mvv,.nm-next{grid-template-columns:1fr 1fr}
-    .nm-rubros{grid-template-columns:repeat(2,1fr)}
-    .nm-flow{grid-template-columns:repeat(3,1fr)}
-    .nm-secure{grid-template-columns:1fr}
-    .nm-contact-grid{grid-template-columns:1fr}
-  }
-  @media(max-width:880px){
-    .nm-sec{padding:62px 0}
-    .nm-hero .nm-wrap{grid-template-columns:1fr;text-align:center;padding:56px 24px}
-    .nm-hero h1{font-size:2.2rem}.nm-hero p.sub{margin:0 auto 32px}.nm-hero .ctas{justify-content:center}
-    .nm-mock{margin:0 auto}
-    .nm-systems,.nm-combo-grid,.nm-prices,.nm-rubros,.nm-why,.nm-steps,.nm-mvv,.nm-next,.nm-clients,.nm-compare,.nm-flow{grid-template-columns:1fr}
-    .nm-systems,.nm-prices,.nm-mvv,.nm-next{grid-template-columns:1fr}
-    .nm-steps,.nm-flow{grid-template-columns:repeat(2,1fr)}
-    .nm-combo{padding:32px 22px}
-    .nm-story-wrap{padding:40px 26px}
-    .nm-head{text-align:center;margin-left:auto;margin-right:auto}
-    .nm-links{display:none;position:absolute;top:78px;left:0;right:0;background:var(--card);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid var(--line)}
-    .nm-links.open{display:flex}.nm-burger{display:block}
-    .nm-chat-panel{left:14px;right:14px;bottom:88px;width:auto}
-  }
+/* ===== SEGURIDAD ===== */
+.seguro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;align-items:center}
+.seguro .cab{margin-bottom:22px}
+.seguro .check{gap:13px}
+.seguro .check li{font-size:1rem}
+.seguro-vis{padding:40px 32px;display:grid;justify-items:center;gap:14px;text-align:center}
+.seguro-vis h3{font-size:28px;font-weight:700}
+.seguro-vis p{color:var(--texto-suave)}
+
+/* ===== PRÓXIMAMENTE ===== */
+.proximas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.proxima{padding:26px 24px;display:grid;gap:10px;align-content:start}
+.proxima .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.proxima h3{font-size:23px;font-weight:600}
+.proxima p{color:var(--texto-suave);font-size:.94rem}
+
+/* ===== PREGUNTAS ===== */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:10px}
+.faq details{background:var(--superficie);border:1px solid var(--borde);border-radius:var(--radio-lg)}
+.sec.blanco .faq details{background:var(--fondo)}
+.faq details[open]{border-color:var(--verde-300)}
+.faq summary{padding:18px 22px;font:600 19px/1.25 var(--font-display);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 28px/1 var(--font-display);color:var(--acento);transition:transform .2s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 22px 20px;color:var(--texto-suave);max-width:68ch}
+.faq .ans strong{color:var(--texto)}
+
+/* ===== CONTACTO ===== */
+.contacto{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:start}
+.form{padding:32px 30px}
+.form h3{font-size:28px;font-weight:700;margin-bottom:6px}
+.form .sub{color:var(--texto-suave);font-size:.95rem;margin-bottom:22px}
+.campo{display:grid;gap:6px;margin-bottom:16px}
+.campo label,.campo .lbl{font:600 15px/1.2 var(--font-display);color:var(--texto)}
+.campo input,.campo select,.campo textarea{width:100%;background:var(--campo);color:var(--texto);border:1px solid var(--borde-control);border-radius:var(--radio-sm);padding:11px 12px;font:inherit;font-size:.95rem}
+.campo textarea{resize:vertical;min-height:96px}
+.marcas{display:flex;flex-wrap:wrap;gap:8px}
+.marcas label{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:var(--radio-sm);border:1px solid var(--borde-control);cursor:pointer;font:400 .92rem var(--font-texto)}
+.marcas input{width:auto;margin:0;accent-color:#235347}
+.error{color:var(--error);font-size:.9rem;min-height:1.2em;margin-bottom:10px}
+.info{display:grid;gap:14px}
+.dato{padding:20px 22px;display:flex;gap:14px;align-items:center}
+.dato .ic{width:46px;height:46px;border-radius:12px;background:var(--menta);color:var(--acento);display:grid;place-items:center;flex:none}
+.dato h3{font-size:19px;font-weight:600}
+.dato a,.dato p{color:var(--texto-suave);font-size:.95rem;text-decoration:none;user-select:all}
+.dato a:hover{color:var(--texto)}
+.info .foto{aspect-ratio:1376/860}
+
+/* ===== LLAMADO FINAL ===== */
+.cta{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;border-radius:22px;overflow:hidden;background:var(--menta)}
+.cta .txt{padding:clamp(28px,5vw,56px);display:grid;gap:16px;align-content:center}
+.cta h2{font-size:clamp(34px,4.6vw,52px);font-weight:700}
+.cta p{color:var(--texto-suave);max-width:46ch}
+.cta .foto{border-radius:0;min-height:300px}
+.cta .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+
+/* ===== PIE ===== */
+.pie-pag{background:var(--menta);border-top:1px solid var(--borde);color:var(--texto-suave)}
+.pie-pag .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding-block:40px}
+.pie-pag img.logo{height:62px;width:auto;margin-bottom:12px}
+.pie-pag .legal{font-size:.92rem;line-height:1.8}
+.pie-pag .legal a{color:var(--texto);text-decoration:none}
+.teselas{width:240px;max-width:100%;border-radius:12px;overflow:hidden}
+.teselas svg{display:block;width:100%;height:auto}
+.copy{border-top:1px solid var(--borde-control);padding-block:18px;font-size:.84rem;text-align:center;opacity:.9}
+
+/* ===== BOTONES FLOTANTES Y CHAT ===== */
+.fab{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;display:grid;place-items:center;z-index:60;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(5,31,32,.22);transition:transform .2s;text-decoration:none}
+.fab:hover{transform:translateY(-2px)}
+.fab.wa{right:20px;background:var(--acento);color:var(--sobre-acento)}
+.fab.chat{left:20px;background:var(--superficie);color:var(--acento);border:1.5px solid var(--borde-control)}
+.chat-panel{position:fixed;left:20px;bottom:calc(88px + env(safe-area-inset-bottom,0px));width:360px;max-width:calc(100vw - 40px);height:520px;max-height:calc(100vh - 130px);background:var(--superficie);border:1px solid var(--borde);border-radius:var(--radio-lg);box-shadow:var(--sombra-alta);z-index:70;display:flex;flex-direction:column;overflow:hidden}
+.chat-panel[hidden]{display:none}
+.chat-head{background:var(--menta);padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--borde)}
+.chat-head img{width:36px;height:36px;border-radius:9px}
+.chat-head h4{font-size:19px;font-weight:600}
+.chat-head .estado{font-size:12px;color:var(--texto-suave)}
+.chat-head .cerrar{margin-left:auto;background:none;border:0;color:var(--texto);cursor:pointer;font-size:26px;line-height:1;width:32px;height:32px}
+.chat-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--fondo)}
+.msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}
+.msg.bot{background:var(--superficie);border:1px solid var(--borde);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.yo{background:var(--acento);color:var(--sobre-acento);align-self:flex-end;border-bottom-right-radius:4px}
+.rapidas{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px 4px;background:var(--superficie)}
+.rapidas button{font:600 13px/1 var(--font-display);background:var(--campo);border:1px solid var(--borde);color:var(--texto);padding:8px 11px;border-radius:var(--radio-pill);cursor:pointer}
+.chat-foot{padding:12px;border-top:1px solid var(--borde);display:flex;gap:8px;background:var(--superficie)}
+.chat-foot input{flex:1;min-width:0;background:var(--campo);color:var(--texto);border:1px solid var(--borde-control);border-radius:var(--radio-sm);padding:10px 12px;font:inherit;font-size:.9rem}
+.chat-foot button{background:var(--acento);color:var(--sobre-acento);border:0;border-radius:var(--radio-sm);padding:0 14px;cursor:pointer}
+.escribiendo{display:flex;gap:4px;padding:12px 14px;background:var(--superficie);border:1px solid var(--borde);border-radius:14px;align-self:flex-start}
+.escribiendo span{width:7px;height:7px;border-radius:50%;background:var(--texto-suave);animation:esc 1.2s infinite}
+.escribiendo span:nth-child(2){animation-delay:.2s}.escribiendo span:nth-child(3){animation-delay:.4s}
+@keyframes esc{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width:1000px){
+  .sistemas,.mvv,.proximas,.clasicos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pantallas,.rubros,.precios{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .clientes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .links a:not(.btn){padding:9px 7px;font-size:15px}
+}
+@media (max-width:880px){
+  .burger{display:inline-flex}
+  .links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--superficie);flex-direction:column;align-items:stretch;padding:16px;gap:4px;border-bottom:1px solid var(--borde)}
+  .links.abierto{display:flex}
+  .links a{padding:12px}
+  .links a.btn{margin:6px 0 0}
+  .hero .wrap{grid-template-columns:1fr;padding-block:40px 52px}
+  .hero .foto{margin:0 auto;max-width:420px}
+  .como-top,.historia,.seguro,.contacto,.cta,.compara,.porque{grid-template-columns:1fr}
+  .modulos{grid-template-columns:1fr}
+  .pasos-svg{display:none}
+  .pasos-lista{display:grid}
+  .pie-pag .wrap{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .sistemas,.mvv,.proximas,.clasicos,.pantallas,.rubros,.precios{grid-template-columns:1fr}
+  .clientes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cliente:last-child{grid-column:1/-1}
+  .nav .logo img{height:36px}
+  .datos{gap:20px}
+  .chat-panel{left:12px;right:12px;width:auto;max-width:none}
+}
 </style>
 </head>
 <body>
 
-<header class="nm-hdr">
-  <div class="nm-wrap nm-nav">
-    <a href="#inicio"><img class="logo" src="img/logo-claro.png" alt="NUMMEROS"></a>
-    <button class="nm-burger" onclick="document.getElementById('nmnav').classList.toggle('open')" aria-label="Menú">
-      <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h20M4 14h20M4 20h20"/></svg>
-    </button>
-    <nav class="nm-links" id="nmnav">
-      <a href="#sistemas">Sistemas</a>
-      <a href="#como">Cómo funciona</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#precios">Precios</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contacto">Contacto</a>
-      <a class="nm-btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20sistemas" target="_blank" rel="noopener">Hablemos</a>
-    </nav>
+<!-- ===================== ENCABEZADO ===================== -->
+<header class="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="NUMMEROS by CONTAX, inicio">
+      <img class="solo-claro" src="img/marca/logo-firma.svg" alt="NUMMEROS by CONTAX" width="163" height="44">
+      <img class="solo-oscuro" src="img/marca/logo-firma-claro.svg" alt="NUMMEROS by CONTAX" width="163" height="44">
+    </a>
+    <div class="herr">
+      <nav class="links" id="menu" aria-label="Secciones">
+        <a href="#sistemas">Sistemas</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#precios">Precios</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20pedir%20una%20demo" target="_blank" rel="noopener">Pedir demo</a>
+      </nav>
+      <button class="modo" id="modo" type="button" aria-label="Cambiar a modo oscuro" title="Modo claro / oscuro">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="nm-hero" id="inicio">
-  <div class="nm-wrap">
+<main>
+<!-- ===================== PORTADA ===================== -->
+<section class="hero" id="inicio">
+  <div class="wrap">
     <div>
-      <span class="nm-tag">NUMMEROS by CONTAX</span>
-      <h1>Software hecho a la medida de tu negocio.</h1>
-      <p class="sub">Deja atrás los Excel, las planillas y los cuadernos. Diseñamos sistemas propios para tu empresa —punto de venta, contabilidad, facturación y más— adaptados a cómo trabajas.</p>
+      <p class="firma"><b>NUMMEROS</b> by CONTAX · Santa Cruz de la Sierra</p>
+      <h1>Sistemas a la medida de tu empresa.</h1>
+      <p class="sub">Deja atrás el Excel, las planillas y los cuadernos. Creamos tu punto de venta, tu sistema contable y tu facturación según cómo trabaja tu negocio. El sistema se adapta a ti, no al revés.</p>
       <div class="ctas">
-        <a class="nm-btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20agendar%20una%20demo" target="_blank" rel="noopener">Agenda una demo</a>
-        <a class="nm-btn ghost" href="#sistemas">Ver sistemas</a>
+        <a class="btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20pedir%20una%20demo" target="_blank" rel="noopener">Pedir demo</a>
+        <a class="btn sec2" href="#sistemas">Ver los sistemas</a>
+      </div>
+      <div class="datos">
+        <div><b>3</b><span>sistemas que se combinan</span></div>
+        <div><b>2 semanas</b><span>para un sistema personalizado</span></div>
+        <div><b>Demo</b><span>con tus datos, antes de decidir</span></div>
       </div>
     </div>
-    <div>
-      <div class="nm-mock">
-        <div class="bar"><i></i><i></i><i></i></div>
-        <div class="body">
-          <div class="side"><span class="on"></span><span></span><span></span><span></span><span></span></div>
-          <div class="main">
-            <div class="kpis">
-              <div class="kpi"><div class="t">VENTAS HOY</div><div class="v">Bs. 4.250</div></div>
-              <div class="kpi"><div class="t">FACTURAS</div><div class="v">38</div></div>
-            </div>
-            <div class="chart"><b style="height:40%"></b><b style="height:62%"></b><b style="height:50%"></b><b style="height:78%"></b><b style="height:95%"></b><b style="height:70%"></b><b style="height:85%"></b></div>
-            <div class="line"><span>Factura #0012 · Mostrador</span><span class="ok">Bs. 350 ✓</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <figure class="foto">
+      <img src="img/clasicos/pitagoras-tablet.jpg" alt="Escultura de Pitágoras mostrando una tablet con el sistema NUMMEROS" width="928" height="1152" fetchpriority="high">
+      <figcaption class="nombre"><b>Pitágoras</b><span>Matemático griego · c. 570 a. C.</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="nm-sec nm-prob">
-  <div class="nm-wrap">
+<!-- ===================== EL PROBLEMA ===================== -->
+<section class="sec menta prob">
+  <div class="wrap">
     <h2>¿Tu negocio todavía funciona así?</h2>
-    <div class="nm-old">
+    <div class="viejo">
       <span>Excel improvisado</span>
-      <span>Google Sheets</span>
+      <span>Google Sheets como sistema</span>
       <span>Proformas manuales</span>
       <span>Facturas a mano</span>
       <span>Cuadernos y notas</span>
       <span>Notas de venta sueltas</span>
     </div>
-    <div class="sol">
-      <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h16M14 7l6 6-6 6"/></svg>
-      Nosotros lo convertimos en un sistema propio, a tu medida.
-    </div>
+    <p class="sol">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      Lo convertimos en un sistema propio, ordenado y a tu medida.
+    </p>
   </div>
 </section>
 
-<!-- 3 SISTEMAS -->
-<section class="nm-sec" id="sistemas">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">NUESTROS SISTEMAS</div>
-      <h2>Tres sistemas, una sola solución</h2>
-      <p>Elige el que necesitas o combínalos. Se adaptan a tu operación, no al revés.</p>
+<!-- ===================== SISTEMAS ===================== -->
+<section class="sec" id="sistemas">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Nuestros sistemas</div>
+      <h2>Tres sistemas que trabajan juntos</h2>
+      <p>Elige el que necesitas o combínalos. Se ajustan a tu operación, no al revés.</p>
     </div>
-    <div class="nm-systems">
-      <div class="nm-system">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M9 16v4M15 16v4"/></svg></div>
+    <div class="sistemas">
+      <article class="tarjeta sistema">
+        <span class="relieve" data-icono="celular" role="img" aria-label="Ícono de celular"></span>
         <h3>Punto de Venta</h3>
-        <p class="desc">Cobra rápido desde cualquier dispositivo y ten el control total de tu operación en tiempo real.</p>
-        <ul>
-          <li>Recepción de pagos y arqueos de caja</li>
+        <p class="desc">Cobra rápido desde cualquier dispositivo y controla tu operación en tiempo real.</p>
+        <ul class="check">
+          <li>Cobros y arqueos de caja</li>
           <li>Control de inventario y stock</li>
           <li>Ventas y movimientos del día</li>
           <li>Reportes financieros básicos</li>
-          <li>Envío de recibos por correo</li>
+          <li>Recibos enviados por correo</li>
         </ul>
-        <div class="foot">Ideal para tiendas, restaurantes y locales con venta diaria.</div>
-      </div>
-      <div class="nm-system">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19V9M10 19V4M15 19v-8M20 19v-5M3 19h18"/></svg></div>
+        <p class="pie">Para tiendas, restaurantes y locales con venta diaria.</p>
+      </article>
+      <article class="tarjeta sistema">
+        <span class="relieve" data-icono="reporte" role="img" aria-label="Ícono de reportes"></span>
         <h3>Sistema Contable</h3>
         <p class="desc">Lleva tus números al día sin depender de hojas de cálculo ni de procesos manuales.</p>
-        <ul>
+        <ul class="check">
           <li>Registro de ingresos y egresos</li>
           <li>Conciliaciones bancarias</li>
-          <li>Reportes para declaraciones</li>
+          <li>Reportes para tus declaraciones</li>
           <li>Estados financieros básicos</li>
-          <li>Organización por cuentas y categorías</li>
+          <li>Cuentas y categorías ordenadas</li>
         </ul>
-        <div class="foot">Perfecto si ya tienes ventas y necesitas orden contable.</div>
-      </div>
-      <div class="nm-system dev">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h3>Sistema de Facturación <span class="nm-badge">En desarrollo</span></h3>
+        <p class="pie">Para negocios con ventas que necesitan orden contable.</p>
+      </article>
+      <article class="tarjeta sistema">
+        <span class="relieve" data-icono="factura" role="img" aria-label="Ícono de factura"></span>
+        <h3>Facturación <span class="badge">En desarrollo</span></h3>
         <p class="desc">Emite facturas y notas de venta desde el mismo sistema, sin papeleo ni errores manuales.</p>
-        <ul>
-          <li>Emisión de facturas y notas</li>
+        <ul class="check">
+          <li>Facturas y notas de venta</li>
           <li>Datos de clientes y productos</li>
           <li>Correlativos automáticos</li>
           <li>Historial y reimpresión</li>
-          <li>Integración con el Punto de Venta</li>
+          <li>Conectado al Punto de Venta</li>
         </ul>
-        <div class="foot">Muy pronto disponible. Consúltanos por el avance.</div>
-      </div>
+        <p class="pie">Muy pronto. Pregúntanos cómo va.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- COMBO -->
-<section class="nm-sec nm-bg" id="combo">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">ARMA TU SISTEMA</div>
+<!-- ===================== ARMA TU SISTEMA ===================== -->
+<section class="sec blanco" id="combina">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Arma tu sistema</div>
       <h2>Combina los módulos que necesitas</h2>
-      <p>No todos los negocios necesitan lo mismo. Tú decides qué módulos sumar.</p>
+      <p>No todos los negocios necesitan lo mismo. Tú decides qué módulos sumar y cuándo.</p>
     </div>
-    <div class="nm-combo">
-      <div class="nm-combo-grid">
-        <div class="nm-module">
-          <h4><span class="dot"></span>Punto de Venta</h4>
-          <ul>
-            <li>Cobros rápidos</li>
-            <li>Control de caja</li>
-            <li>Inventario</li>
-            <li>Recibos por correo</li>
-          </ul>
-        </div>
-        <div class="nm-module">
-          <h4><span class="dot"></span>Contable</h4>
-          <ul>
-            <li>Ingresos y egresos</li>
-            <li>Conciliaciones</li>
-            <li>Reportes</li>
-            <li>Estados financieros</li>
-          </ul>
-        </div>
-        <div class="nm-module dev">
-          <h4><span class="dot"></span>Facturación</h4>
-          <ul>
-            <li>Facturas</li>
-            <li>Notas de venta</li>
-            <li>Correlativos</li>
-            <li>Historial</li>
-          </ul>
-        </div>
+    <div class="tarjeta combo">
+      <div class="modulos">
+        <div class="modulo"><h4><i></i>Punto de Venta</h4><ul><li>Cobros rápidos</li><li>Control de caja</li><li>Inventario</li><li>Recibos por correo</li></ul></div>
+        <div class="modulo"><h4><i></i>Contable</h4><ul><li>Ingresos y egresos</li><li>Conciliaciones</li><li>Reportes</li><li>Estados financieros</li></ul></div>
+        <div class="modulo dev"><h4><i></i>Facturación</h4><ul><li>Facturas</li><li>Notas de venta</li><li>Correlativos</li><li>Historial</li></ul></div>
       </div>
-      <div class="nm-combo-msg">
-        <p>Puedes empezar con uno y sumar los demás cuando tu negocio lo necesite.</p>
-        <div class="combos">
-          <span>Solo Punto de Venta</span>
-          <span>Solo Contable</span>
-          <span>Punto de Venta + Contable</span>
-          <span>Punto de Venta + Facturación</span>
-          <span>Los 3 módulos juntos</span>
+      <div class="combos">
+        <p>Empieza con uno y suma los demás cuando tu negocio lo necesite.</p>
+        <div class="pills">
+          <span>Solo Punto de Venta</span><span>Solo Contable</span><span>Punto de Venta + Contable</span><span>Punto de Venta + Facturación</span><span>Los 3 módulos</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RUBROS -->
-<section class="nm-sec" id="rubros">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">DISEÑADO PARA</div>
-      <h2>Negocios como el tuyo</h2>
-      <p>Nuestros sistemas se adaptan a distintos rubros. Estos son los más comunes:</p>
+<!-- ===================== CÓMO FUNCIONA (pantallas del sistema) ===================== -->
+<section class="sec" id="como">
+  <div class="wrap">
+    <div class="como-top">
+      <div class="cab">
+        <div class="kicker">Cómo funciona</div>
+        <h2>Tu día a día con NUMMEROS</h2>
+        <p>Así se ve cobrar, facturar, controlar tu stock y ver tus números desde tu propio sistema. Desde el celular, la tablet o la PC, sin instalar nada.</p>
+      </div>
+      <figure class="foto">
+        <img src="img/clasicos/arquimedes-cafeteria.jpg" alt="Escultura de Arquímedes cobrando en la caja de un restaurante" width="1376" height="768" loading="lazy">
+        <figcaption class="nombre"><b>Arquímedes</b><span>Matemático griego · c. 287 a. C.</span></figcaption>
+      </figure>
     </div>
-    <div class="nm-rubros">
-      <div class="nm-rubro">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3v8a4 4 0 008 0V3M11 15v6M7 21h8"/></svg></div>
-        <h3>Restaurantes</h3>
-        <p>Mesas, comandas, caja</p>
-      </div>
-      <div class="nm-rubro">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l2-5h14l2 5M4 9v11h16V9M9 20v-6h6v6"/></svg></div>
-        <h3>Tiendas</h3>
-        <p>Ventas, stock, clientes</p>
-      </div>
-      <div class="nm-rubro">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/><path d="M14 3v4h4"/></svg></div>
-        <h3>Farmacias</h3>
-        <p>Productos, lotes, control</p>
-      </div>
-      <div class="nm-rubro">
-        <div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3l-3 8h5l-3 10M5 21h14"/></svg></div>
-        <h3>Ferreterías</h3>
-        <p>Catálogo amplio, facturación</p>
-      </div>
-    </div>
-    <p class="nm-rubro-more">…y cualquier negocio que necesite orden, control y una mejor forma de trabajar.</p>
-  </div>
-</section>
-
-<!-- CÓMO FUNCIONA -->
-<section class="nm-sec nm-bg" id="como">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">CÓMO FUNCIONA</div>
-      <h2>Tu día a día con NUMMEROS</h2>
-      <p>Así de simple es cobrar, registrar y controlar todo desde tu sistema.</p>
-    </div>
-    <div class="nm-flow">
-      <div class="nm-flow-item">
-        <div class="num">1</div>
-        <div class="ic"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0114 0"/></svg></div>
-        <h4>Tu cliente compra</h4>
-        <p>Llega el pedido o el servicio, ya sea en local o delivery.</p>
-      </div>
-      <div class="nm-flow-item">
-        <div class="num">2</div>
-        <div class="ic"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h4>Cobras desde donde estés</h4>
-        <p>Celular, tablet o PC. Sin instalar nada.</p>
-      </div>
-      <div class="nm-flow-item">
-        <div class="num">3</div>
-        <div class="ic"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h14v16H5zM8 8h6M8 12h8M8 16h5"/></svg></div>
-        <h4>El sistema registra todo</h4>
-        <p>Venta, stock, pago, cliente. Todo automático.</p>
-      </div>
-      <div class="nm-flow-item">
-        <div class="num">4</div>
-        <div class="ic"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-        <h4>Envías el recibo</h4>
-        <p>Al correo del cliente en segundos, si lo deseas.</p>
-      </div>
-      <div class="nm-flow-item">
-        <div class="num">5</div>
-        <div class="ic"><svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10M10 20V4M16 20v-8M4 20h16"/></svg></div>
-        <h4>Ves tus números</h4>
-        <p>Cierre de caja y reportes con un clic.</p>
-      </div>
+    <div class="pantallas">
+      <article class="tarjeta pantalla">
+        <div class="lienzo"><svg viewBox="0 0 240 200" role="img" aria-label="Aviso de cierre de caja guardado en el celular">
+          <rect x="70" y="14" width="100" height="186" rx="16" fill="#163832"/><rect x="78" y="26" width="84" height="174" rx="8" fill="#F4FAF5"/>
+          <rect x="30" y="70" width="180" height="58" rx="12" fill="#FFFFFF" stroke="#DAF1DE" stroke-width="2"/><rect x="42" y="82" width="22" height="22" rx="6" fill="#235347"/>
+          <path d="M48 93l4 4 7-8" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="74" y="92" font-family="Akshar,sans-serif" font-weight="600" font-size="13" fill="#163832">Cierre guardado</text><text x="74" y="110" font-family="Questrial,sans-serif" font-size="10.5" fill="#557363">Bs 12.430,50 en efectivo</text></svg></div>
+        <div class="txt"><span class="paso">Cobras</span><h3>Ventas desde el celular</h3><p>Registras la venta y el pago en segundos. Al cerrar caja, todo cuadra solo.</p></div>
+      </article>
+      <article class="tarjeta pantalla">
+        <div class="lienzo"><svg viewBox="0 0 240 200" role="img" aria-label="Factura emitida">
+          <rect x="28" y="36" width="184" height="128" rx="14" fill="#FFFFFF" stroke="#DAF1DE" stroke-width="2"/>
+          <text x="46" y="66" font-family="Akshar,sans-serif" font-weight="600" font-size="13" fill="#557363">FACTURA N.° 0458</text><rect x="150" y="54" width="46" height="18" rx="9" fill="#DAF1DE"/><text x="173" y="67" text-anchor="middle" font-family="Akshar,sans-serif" font-weight="600" font-size="10" fill="#235347">Válida</text>
+          <text x="46" y="108" font-family="Akshar,sans-serif" font-weight="700" font-size="30" fill="#163832">Bs 1.250,00</text><rect x="46" y="124" width="150" height="2" fill="#DAF1DE"/><text x="46" y="146" font-family="Questrial,sans-serif" font-size="11" fill="#557363">Cafetería Central · hoy, 15:30</text></svg></div>
+        <div class="txt"><span class="paso">Registras</span><h3>Factura y recibo</h3><p>El sistema guarda la venta, el cliente y el pago. Envías el recibo al correo si lo deseas.</p></div>
+      </article>
+      <article class="tarjeta pantalla">
+        <div class="lienzo"><svg viewBox="0 0 240 200" role="img" aria-label="Lista de inventario con stock">
+          <rect x="28" y="24" width="184" height="152" rx="14" fill="#FFFFFF" stroke="#DAF1DE" stroke-width="2"/>
+          <text x="46" y="52" font-family="Akshar,sans-serif" font-weight="600" font-size="12" fill="#557363">INVENTARIO</text>
+          <g font-family="Questrial,sans-serif" font-size="12" fill="#163832"><text x="46" y="82">Shampoo auto</text><text x="46" y="112">Cera líquida</text><text x="46" y="142">Paños microfibra</text></g>
+          <g font-family="Akshar,sans-serif" font-weight="600" font-size="12" text-anchor="end"><text x="194" y="82" fill="#163832">24</text><text x="194" y="112" fill="#163832">9</text><text x="194" y="142" fill="#B42318">2</text></g>
+          <rect x="46" y="92" width="148" height="1.5" fill="#DAF1DE"/><rect x="46" y="122" width="148" height="1.5" fill="#DAF1DE"/></svg></div>
+        <div class="txt"><span class="paso">Controlas</span><h3>Inventario al día</h3><p>Cada venta descuenta el stock. Ves al instante qué se está acabando.</p></div>
+      </article>
+      <article class="tarjeta pantalla">
+        <div class="lienzo"><svg viewBox="0 0 240 200" role="img" aria-label="Ventas del mes con línea de crecimiento">
+          <rect x="28" y="30" width="184" height="140" rx="14" fill="#FFFFFF" stroke="#DAF1DE" stroke-width="2"/>
+          <text x="46" y="58" font-family="Akshar,sans-serif" font-weight="600" font-size="12" fill="#557363">VENTAS DEL MES</text><text x="46" y="90" font-family="Akshar,sans-serif" font-weight="700" font-size="26" fill="#163832">Bs 48.250</text><text x="160" y="90" font-family="Akshar,sans-serif" font-weight="600" font-size="13" fill="#235347">+12 %</text>
+          <path d="M46 150 L76 138 L104 142 L134 122 L162 126 L194 104 L194 156 L46 156Z" fill="#DAF1DE"/><path d="M46 150 L76 138 L104 142 L134 122 L162 126 L194 104" fill="none" stroke="#235347" stroke-width="3" stroke-linejoin="round"/><circle cx="194" cy="104" r="4.5" fill="#235347"/></svg></div>
+        <div class="txt"><span class="paso">Decides</span><h3>Tus números claros</h3><p>Cierre de caja y reportes con un clic, para decidir con datos y no a ojo.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ANTES VS DESPUÉS -->
-<section class="nm-sec">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">ANTES VS DESPUÉS</div>
-      <h2>El cambio que notarás</h2>
+<!-- ===================== ANTES Y DESPUÉS ===================== -->
+<section class="sec blanco">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Antes y después</div>
+      <h2>El cambio que vas a notar</h2>
       <p>Esto es lo que dejas atrás cuando empiezas a usar un sistema propio.</p>
     </div>
-    <div class="nm-compare">
-      <div class="nm-compare-card before">
-        <h3><span class="em"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l8 8M14 6l-8 8"/></svg></span>Antes</h3>
+    <div class="compara">
+      <div class="tarjeta antes">
+        <h3>Antes</h3>
         <ul>
           <li>Todo en cuadernos, Excel o Google Sheets</li>
-          <li>Errores al sumar o notas que se pierden</li>
+          <li>Errores al sumar y notas que se pierden</li>
           <li>No sabes cuánto ganaste realmente</li>
           <li>Pierdes tiempo en lugar de vender</li>
           <li>Sin historial de clientes ni productos</li>
         </ul>
       </div>
-      <div class="nm-compare-card after">
-        <h3><span class="em"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11l4 4 8-9"/></svg></span>Después</h3>
+      <div class="tarjeta despues">
+        <h3>Con NUMMEROS</h3>
         <ul>
           <li>Todo en un sistema propio, en la nube</li>
-          <li>Datos confiables al instante</li>
+          <li>Cifras exactas al instante</li>
           <li>Ves tus finanzas en tiempo real</li>
           <li>Te enfocas en hacer crecer tu negocio</li>
           <li>Historial completo por cliente y producto</li>
@@ -710,481 +662,485 @@
   </div>
 </section>
 
-<!-- CLIENTES -->
-<section class="nm-sec nm-bg" id="clientes">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">CONFÍAN EN NOSOTROS</div>
-      <h2>Negocios que ya trabajan con NUMMEROS</h2>
-      <p>Empresas y emprendimientos que dieron el paso a un sistema propio.</p>
+<!-- ===================== RUBROS ===================== -->
+<section class="sec" id="rubros">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Hecho para</div>
+      <h2>Negocios como el tuyo</h2>
+      <p>Cada sistema se ajusta al rubro. Estos son los que más atendemos.</p>
     </div>
-    <div class="nm-clients">
-      <div class="nm-client">
-        <img src="img/clientes/contax.png" alt="CONTAX" onerror="this.style.display='none'">
-        <span>CONTAX<br>Contabilidad e Impuestos</span>
-      </div>
-      <div class="nm-client">
-        <img src="img/clientes/memphis.png" alt="Memphis" onerror="this.style.display='none'">
-        <span>Memphis</span>
-      </div>
-      <div class="nm-client">
-        <img src="img/clientes/sushiflash.png" alt="SushiFlash" onerror="this.style.display='none'">
-        <span>SushiFlash</span>
-      </div>
-      <div class="nm-client">
-        <img src="img/clientes/mtg-delivery.png" alt="MTG Delivery" onerror="this.style.display='none'">
-        <span>MTG Delivery</span>
-      </div>
-      <div class="nm-client">
-        <img src="img/clientes/junkers-carwash.png" alt="Junkers Car Wash" onerror="this.style.display='none'">
-        <span>Junkers<br>Car Wash</span>
-      </div>
-      <div class="nm-client">
-        <img src="img/clientes/peso.png" alt="PE$O" onerror="this.style.display='none'">
-        <span>PE$O<br>Tu Cuenta en Dólares</span>
-      </div>
+    <div class="rubros">
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a3 3 0 006 0V3M10 14v7M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span><h3>Restaurantes</h3><p>Mesas, comandas y caja</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l2-5h14l2 5M4 9v11h16V9M9 20v-6h6v6"/></svg></span><h3>Tiendas</h3><p>Ventas, stock y clientes</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16l1.5-5h11L19 16M4 16h16v3H4zM7 19v2M17 19v2M9 7c0-2 1-3 3-3s3 1 3 3"/></svg></span><h3>Lavaderos de autos</h3><p>Servicios, turnos e insumos</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M3 17V7h10v10M13 10h4l3 4v3"/></svg></span><h3>Flotas y delivery</h3><p>Conductores, pagos y viajes</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg></span><h3>Farmacias</h3><p>Productos, lotes y vencimientos</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-3 3-6-6zM11 7l-7 7 3 3 7-7M4 20h7"/></svg></span><h3>Ferreterías</h3><p>Catálogo amplio y facturación</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Fintech</h3><p>Movimientos, saldos y reportes</p></div>
+      <div class="tarjeta rubro"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V10M10 20V4M15 20v-8M20 20v-5M3 20h18"/></svg></span><h3>Servicios contables</h3><p>Clientes, planillas y declaraciones</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section class="nm-sec" id="porque">
-  <div class="nm-wrap">
-    <div class="nm-head"><div class="lead">POR QUÉ NUMMEROS</div><h2>Un sistema que es realmente tuyo</h2></div>
-    <div class="nm-why">
-      <div class="nm-w"><span class="ic"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2l2 5 5 .5-4 3.5 1.3 5L10 18l-4.3 3 1.3-5-4-3.5 5-.5z"/></svg></span><div><h3>Se adapta a ti, no al revés</h3><p>El sistema se construye según tu forma de trabajar. No tienes que cambiar tu operación.</p></div></div>
-      <div class="nm-w"><span class="ic"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2v16M6 6h6a2.5 2.5 0 010 5H7a2.5 2.5 0 000 5h6"/></svg></span><div><h3>Reduce costos</h3><p>Sin licencias mensuales caras ni pagar por funciones que nunca usas.</p></div></div>
-      <div class="nm-w"><span class="ic"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V5z"/><path d="M7 10l2 2 4-4"/></svg></span><div><h3>El sistema es tuyo</h3><p>Tú eres dueño de tu información y de tu sistema, siempre disponible para tu negocio.</p></div></div>
-      <div class="nm-w"><span class="ic"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2C6 2 3 5 3 9c0 5 7 9 7 9s7-4 7-9c0-4-3-7-7-7z"/><circle cx="10" cy="9" r="2.4"/></svg></span><div><h3>Soporte local y cercano</h3><p>Estamos en Santa Cruz, te acompañamos y resolvemos en tu mismo idioma.</p></div></div>
+<!-- ===================== CLIENTES ===================== -->
+<section class="sec blanco" id="clientes">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Confían en nosotros</div>
+      <h2>Empresas que ya trabajan con NUMMEROS</h2>
+      <p>Negocios que dejaron las planillas y dieron el paso a un sistema propio.</p>
+    </div>
+    <div class="clientes">
+      <div class="tarjeta cliente"><img src="img/clientes/memphis.png" alt="" onerror="this.remove()"><b>Memphis</b><span>Restaurante</span></div>
+      <div class="tarjeta cliente"><img src="img/clientes/sushiflash.png" alt="" onerror="this.remove()"><b>SushiFlash</b><span>Restaurante</span></div>
+      <div class="tarjeta cliente"><img src="img/clientes/mtg-delivery.png" alt="" onerror="this.remove()"><b>MTG Delivery</b><span>Delivery</span></div>
+      <div class="tarjeta cliente"><img src="img/clientes/junkers-carwash.png" alt="" onerror="this.remove()"><b>Junkers Car Wash</b><span>Lavadero de autos</span></div>
+      <div class="tarjeta cliente"><img src="img/clientes/peso.png" alt="" onerror="this.remove()"><b>PE$O</b><span>Tu cuenta en dólares</span></div>
     </div>
   </div>
 </section>
 
-<!-- NOSOTROS: HISTORIA + MISIÓN/VISIÓN/VALORES -->
-<section class="nm-sec nm-bg" id="nosotros">
-  <div class="nm-wrap">
-    <div class="nm-story-wrap">
-      <div class="lead">NUESTRA HISTORIA</div>
-      <h2>Sabemos lo que es perder horas en lugar de crecer.</h2>
-      <p>Sabemos lo que es perder horas en Excel, cuadernos y planillas en lugar de enfocarse en hacer crecer el negocio. Nos pasó. Por eso creamos <strong>NUMMEROS</strong>: sistemas sencillos, accesibles y hechos a la medida de pequeños negocios.</p>
-      <p>No vendemos el software más sofisticado del mercado. Vendemos <strong>tranquilidad</strong>: que puedas cobrar, controlar tu inventario, ver tus números y facturar sin dolores de cabeza. Y si algún día necesitas algo más grande, migras sin problema. Mientras tanto, tú te enfocas en crecer.</p>
-      <div class="sign">— El equipo de NUMMEROS</div>
+<!-- ===================== LOS CLÁSICOS DE LOS NÚMEROS ===================== -->
+<section class="sec" id="clasicos">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Los clásicos de los números</div>
+      <h2>Ellos ordenaron los números. Hoy trabajan con NUMMEROS.</h2>
+      <p>Pitágoras, Euclides y Arquímedes pusieron orden a los números, las medidas y las cuentas. Cada uno representa una parte de lo que hacemos por tu negocio.</p>
     </div>
-
-    <div class="nm-mvv">
-      <div class="nm-mvv-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
-        <h3>Misión</h3>
-        <p>Hacer que la tecnología sea accesible para los pequeños negocios, dándoles herramientas simples y adaptadas para ordenar su operación, tomar mejores decisiones y enfocarse en crecer.</p>
-      </div>
-      <div class="nm-mvv-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>Visión</h3>
-        <p>Ser el aliado tecnológico de los pequeños negocios de Bolivia, acompañándolos desde sus primeros pasos hasta que estén listos para dar el salto a soluciones más grandes.</p>
-      </div>
-      <div class="nm-mvv-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-        <h3>Valores</h3>
-        <ul>
-          <li><strong>Simplicidad:</strong> si no es fácil de usar, no sirve.</li>
-          <li><strong>Cercanía:</strong> hablamos tu idioma, no tecnicismos.</li>
-          <li><strong>Transparencia:</strong> lo que ves es lo que obtienes.</li>
-          <li><strong>Compromiso:</strong> tu crecimiento es nuestro éxito.</li>
-        </ul>
-      </div>
+    <div class="clasicos">
+      <article class="tarjeta clasico">
+        <figure class="foto"><img src="img/clasicos/pitagoras-celular.jpg" alt="Escultura de Pitágoras usando un celular" width="928" height="1152" loading="lazy"><figcaption class="nombre"><b>Pitágoras</b><span>Matemático griego · c. 570 a. C.</span></figcaption></figure>
+        <div class="txt"><span class="rol">El día a día</span><h3>Ventas, caja y cobros</h3><p>Lo que pasa cada día en tu mostrador, registrado y cuadrado al cerrar.</p></div>
+      </article>
+      <article class="tarjeta clasico">
+        <figure class="foto"><img src="img/clasicos/euclides-laptop.jpg" alt="Escultura de Euclides trabajando en una laptop" width="928" height="1152" loading="lazy"><figcaption class="nombre"><b>Euclides</b><span>Matemático griego · c. 300 a. C.</span></figcaption></figure>
+        <div class="txt"><span class="rol">El orden</span><h3>Sistemas y reportes</h3><p>Procesos bien armados y reportes que se entienden a la primera.</p></div>
+      </article>
+      <article class="tarjeta clasico">
+        <figure class="foto"><img src="img/clasicos/arquimedes-balanza.jpg" alt="Escultura de Arquímedes junto a una balanza con monedas y un celular" width="928" height="1152" loading="lazy"><figcaption class="nombre"><b>Arquímedes</b><span>Matemático griego · c. 287 a. C.</span></figcaption></figure>
+        <div class="txt"><span class="rol">El equilibrio</span><h3>Cuentas que cuadran</h3><p>Inventario, contabilidad y control para que nada se escape.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PROCESO -->
-<section class="nm-sec" id="proceso">
-  <div class="nm-wrap">
-    <div class="nm-head mid"><div class="lead">CÓMO TRABAJAMOS</div><h2>De tu idea a tu sistema</h2></div>
-    <div class="nm-steps">
-      <div class="nm-step"><div class="num">01</div><h3>Entendemos tu operación</h3><p>Analizamos cómo trabajas hoy y qué necesitas resolver.</p></div>
-      <div class="nm-step"><div class="num">02</div><h3>Diseñamos la solución</h3><p>Definimos el sistema a tu medida y lo validamos contigo.</p></div>
-      <div class="nm-step"><div class="num">03</div><h3>Desarrollamos e implementamos</h3><p>Construimos tu sistema y lo ponemos en marcha en tu negocio.</p></div>
-      <div class="nm-step"><div class="num">04</div><h3>Capacitación y soporte</h3><p>Te enseñamos a usarlo y te acompañamos a largo plazo.</p></div>
+<!-- ===================== POR QUÉ NUMMEROS ===================== -->
+<section class="sec blanco" id="porque">
+  <div class="wrap">
+    <div class="cab">
+      <div class="kicker">Por qué NUMMEROS</div>
+      <h2>Un sistema que es realmente tuyo</h2>
+    </div>
+    <div class="porque">
+      <div class="tarjeta razon"><span class="relieve" data-icono="aprobado" role="img" aria-label="Ícono de aprobado"></span><div><h3>Se adapta a ti, no al revés</h3><p>El sistema se construye según tu forma de trabajar. No tienes que cambiar tu operación.</p></div></div>
+      <div class="tarjeta razon"><span class="relieve" data-icono="reporte" role="img" aria-label="Ícono de reportes"></span><div><h3>Reduce costos</h3><p>Sin licencias mensuales caras ni pagar por funciones que nunca usas.</p></div></div>
+      <div class="tarjeta razon"><span class="relieve" data-icono="seguridad" role="img" aria-label="Ícono de seguridad"></span><div><h3>El sistema es tuyo</h3><p>Tú eres dueño de tu información y de tu sistema, siempre disponible para tu negocio.</p></div></div>
+      <div class="tarjeta razon"><span class="relieve" data-icono="equipo" role="img" aria-label="Ícono de equipo"></span><div><h3>Soporte cercano</h3><p>Estamos en Santa Cruz. Te acompañamos y te hablamos claro, sin tecnicismos.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- PRECIOS -->
-<section class="nm-sec nm-bg" id="precios">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">PRECIOS</div>
-      <h2>Planes a tu medida</h2>
-      <p>Cada negocio es distinto. Por eso no tenemos precios fijos: cotizamos según los módulos que necesites.</p>
-    </div>
-    <div class="nm-prices">
-      <div class="nm-price">
-        <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10"/></svg></div>
-        <h3>Solo Punto de Venta</h3>
-        <p>Para empezar con el control diario de tu operación.</p>
-        <span class="tag">Cotización personalizada</span>
-      </div>
-      <div class="nm-price">
-        <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19V9M10 19V4M15 19v-8M20 19v-5M3 19h18"/></svg></div>
-        <h3>Solo Contable</h3>
-        <p>Para tener tus finanzas ordenadas y listas.</p>
-        <span class="tag">Cotización personalizada</span>
-      </div>
-      <div class="nm-price">
-        <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h3>Solo Facturación</h3>
-        <p>Para emitir facturas y notas desde el sistema.</p>
-        <span class="tag">Próximamente</span>
-      </div>
-      <div class="nm-price">
-        <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M11 11l5 5"/></svg></div>
-        <h3>Combo (2 o 3)</h3>
-        <p>Para negocios que quieren todo integrado.</p>
-        <span class="tag">Cotización personalizada</span>
-      </div>
-    </div>
-    <div class="nm-price-note">
-      💡 <strong>Próximamente:</strong> planes de suscripción mensual o anual para que empieces sin una inversión inicial alta.
-    </div>
-    <div class="nm-price-cta">
-      <a class="nm-btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20cotizar%20un%20sistema" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- SEGURIDAD -->
-<section class="nm-sec" id="seguridad">
-  <div class="nm-wrap">
-    <div class="nm-secure">
+<!-- ===================== NOSOTROS ===================== -->
+<section class="sec" id="nosotros">
+  <div class="wrap">
+    <div class="historia">
       <div>
-        <div class="nm-head" style="margin-bottom:20px">
-          <div class="lead">SEGURIDAD</div>
-          <h2 style="font-size:2rem">Tu información, siempre tuya</h2>
+        <div class="kicker">Nuestra historia</div>
+        <h2>Sabemos lo que es perder horas en lugar de crecer.</h2>
+        <p>Perdimos horas en Excel, cuadernos y planillas en lugar de enfocarnos en hacer crecer el negocio. Por eso creamos <strong>NUMMEROS</strong>: sistemas sencillos, accesibles y hechos a la medida de cada empresa.</p>
+        <p>No vendemos el sistema más sofisticado del mercado. Vendemos <strong>tranquilidad</strong>: que puedas cobrar, controlar tu inventario, ver tus números y facturar sin dolores de cabeza. Y si algún día necesitas algo más grande, migras sin problema.</p>
+        <div class="contax">
+          <div><b>CONTAX</b><br><span>Consultora contable y financiera</span></div>
+          <span class="flecha">→</span>
+          <img class="solo-claro" src="img/marca/logo-horizontal.svg" alt="NUMMEROS" width="252" height="40">
+          <img class="solo-oscuro" src="img/marca/logo-horizontal-claro.svg" alt="NUMMEROS" width="252" height="40">
         </div>
-        <p>Sabemos que tu negocio depende de sus datos. Por eso NUMMEROS trabaja así:</p>
-        <ul class="nm-secure-list">
-          <li>Todo funciona en la nube, con actualizaciones al instante.</li>
-          <li>Tu información es exclusivamente tuya. Nunca la compartimos ni vendemos.</li>
-          <li>Puedes exportar tus datos a Excel o CSV cuando quieras, sin depender de nosotros.</li>
-          <li>Acceso desde cualquier dispositivo con tu usuario y contraseña.</li>
-          <li>Respaldos automáticos para que nunca pierdas tu historial.</li>
-        </ul>
+        <p style="margin-top:14px;font-size:.92rem">NUMMEROS es una marca de CONTAX: une sus servicios contables y financieros con tecnología propia.</p>
       </div>
-      <div class="nm-secure-visual">
-        <div class="shield"><svg width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 4l14 5v11c0 8-6 14-14 17-8-3-14-9-14-17V9z"/><path d="M14 21l5 5 9-9"/></svg></div>
-        <h3>Tranquilidad total</h3>
-        <p>Tu negocio no puede parar. Tu información, tampoco.</p>
+      <figure class="foto">
+        <img src="img/clasicos/los-tres-reunion.jpg" alt="Esculturas de Pitágoras, Euclides y Arquímedes reunidos frente a una pantalla" width="1376" height="768" loading="lazy">
+        <figcaption class="nombre"><b>Pitágoras, Euclides y Arquímedes</b><span>Los clásicos de los números</span></figcaption>
+      </figure>
+    </div>
+    <div class="mvv">
+      <div class="tarjeta"><h3>Misión</h3><p>Hacer que la tecnología sea accesible para las empresas, con sistemas simples y a su medida para ordenar su operación, tomar mejores decisiones y enfocarse en crecer.</p></div>
+      <div class="tarjeta"><h3>Visión</h3><p>Ser el aliado tecnológico de las empresas de Bolivia, desde sus primeros pasos hasta que estén listas para dar el salto a sistemas más grandes.</p></div>
+      <div class="tarjeta"><h3>Cómo somos</h3>
+        <div class="valores">
+          <div><b>Ordenado</b><span>Todo en su lugar, como un buen balance.</span></div>
+          <div><b>Preciso</b><span>Cifras y fechas exactas, sin rodeos.</span></div>
+          <div><b>Cercano</b><span>Hablamos como personas, no como un sistema.</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRÓXIMAS FUNCIONES -->
-<section class="nm-sec nm-bg" id="proximas">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">EN EL HORIZONTE</div>
-      <h2>Lo que viene para NUMMEROS</h2>
-      <p>Seguimos innovando para que tu negocio tenga cada vez mejores herramientas.</p>
+<!-- ===================== PROCESO ===================== -->
+<section class="sec blanco" id="proceso">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Cómo trabajamos</div>
+      <h2>De tu idea a tu sistema</h2>
     </div>
-    <div class="nm-next">
-      <div class="nm-next-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
-        <h3>App Android (APK)</h3>
-        <p>Lleva tu sistema en el bolsillo. Disponible directamente como APK, sin depender de tiendas de aplicaciones.</p>
+    <div class="pasos-svg" id="pasosSvg" role="img" aria-label="Cuatro pasos: conocemos, diseñamos, probamos y acompañamos"></div>
+    <ol class="pasos-lista">
+      <li class="tarjeta"><span class="n">01</span><div><b>Conocemos</b><span>Tu operación y tus números</span></div></li>
+      <li class="tarjeta"><span class="n">02</span><div><b>Diseñamos</b><span>El sistema con tu equipo</span></div></li>
+      <li class="tarjeta"><span class="n">03</span><div><b>Probamos</b><span>Con datos reales</span></div></li>
+      <li class="tarjeta"><span class="n">04</span><div><b>Acompañamos</b><span>Capacitación, soporte y mejoras</span></div></li>
+    </ol>
+    <p class="pasos-nota">Un sistema personalizado toma unas 2 semanas: la primera entendemos tu negocio y te mostramos la demo; la segunda aplicamos tus ajustes y te lo entregamos listo.</p>
+  </div>
+</section>
+
+<!-- ===================== PRECIOS ===================== -->
+<section class="sec" id="precios">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Precios</div>
+      <h2>Planes a tu medida</h2>
+      <p>Cada negocio es distinto. Por eso cotizamos según los módulos que necesitas y cuánto quieres personalizar.</p>
+    </div>
+    <div class="precios">
+      <div class="tarjeta precio"><h3>Solo Punto de Venta</h3><p>Para empezar con el control diario de tu operación.</p><span class="etq">Cotización personalizada</span></div>
+      <div class="tarjeta precio"><h3>Solo Contable</h3><p>Para tener tus finanzas ordenadas y listas.</p><span class="etq">Cotización personalizada</span></div>
+      <div class="tarjeta precio"><h3>Solo Facturación</h3><p>Para emitir facturas y notas desde el sistema.</p><span class="etq">Próximamente</span></div>
+      <div class="tarjeta precio"><h3>Combo de 2 o 3</h3><p>Para negocios que quieren todo conectado.</p><span class="etq">Cotización personalizada</span></div>
+    </div>
+    <p class="nota"><b>Próximamente:</b> planes de suscripción mensual o anual, para que empieces sin una inversión inicial alta.</p>
+    <p class="centro"><a class="btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20cotizar%20un%20sistema" target="_blank" rel="noopener">Cotizar por WhatsApp</a></p>
+  </div>
+</section>
+
+<!-- ===================== SEGURIDAD ===================== -->
+<section class="sec blanco" id="seguridad">
+  <div class="wrap seguro">
+    <div>
+      <div class="cab">
+        <div class="kicker">Seguridad</div>
+        <h2>Tu información, siempre tuya</h2>
+        <p>Tu negocio depende de sus datos. Por eso NUMMEROS trabaja así:</p>
       </div>
-      <div class="nm-next-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 01-1 4 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-4-1L3 21l1.8-5.4a8.4 8.4 0 01-1-4A8.5 8.5 0 0111.5 3 8.4 8.4 0 0121 11.5z"/></svg></div>
-        <h3>CRM para WhatsApp</h3>
-        <p>Extensión para gestionar conversaciones de WhatsApp desde el navegador, con herramientas para responder mejor y más rápido a tus clientes.</p>
-      </div>
-      <div class="nm-next-card">
-        <div class="ic"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h3>Sistema de Facturación</h3>
-        <p>Emisión de facturas y notas directamente desde tu sistema NUMMEROS. Actualmente en desarrollo.</p>
-      </div>
+      <ul class="check">
+        <li>Todo funciona en la nube, con actualizaciones al instante.</li>
+        <li>Tu información es solo tuya. Nunca la compartimos ni la vendemos.</li>
+        <li>Exportas tus datos a Excel o CSV cuando quieras, sin depender de nosotros.</li>
+        <li>Entras desde cualquier dispositivo con tu usuario y contraseña.</li>
+        <li>Respaldos automáticos para que nunca pierdas tu historial.</li>
+      </ul>
+    </div>
+    <div class="tarjeta seguro-vis">
+      <span class="relieve xl" data-icono="seguridad" role="img" aria-label="Candado en relieve"></span>
+      <h3>Tranquilidad total</h3>
+      <p>Tu negocio no puede parar. Tu información, tampoco.</p>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="nm-sec" id="faq">
-  <div class="nm-wrap">
-    <div class="nm-head mid">
-      <div class="lead">PREGUNTAS FRECUENTES</div>
+<!-- ===================== PRÓXIMAMENTE ===================== -->
+<section class="sec" id="proximas">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Lo que viene</div>
+      <h2>Nuevas herramientas para tu negocio</h2>
+      <p>Seguimos sumando funciones para que trabajes cada vez mejor.</p>
+    </div>
+    <div class="proximas">
+      <div class="tarjeta proxima"><div class="top"><span class="relieve" data-icono="celular" role="img" aria-label="Ícono de app"></span><span class="badge">Próximamente</span></div><h3>App Android</h3><p>Tu sistema en el bolsillo, instalado directo como APK, sin depender de tiendas de aplicaciones.</p></div>
+      <div class="tarjeta proxima"><div class="top"><span class="relieve" data-icono="equipo" role="img" aria-label="Ícono de clientes"></span><span class="badge">Próximamente</span></div><h3>CRM para WhatsApp</h3><p>Una extensión para ordenar tus conversaciones de WhatsApp desde el navegador y responder mejor y más rápido.</p></div>
+      <div class="tarjeta proxima"><div class="top"><span class="relieve" data-icono="factura" role="img" aria-label="Ícono de factura"></span><span class="badge">En desarrollo</span></div><h3>Sistema de Facturación</h3><p>Facturas y notas de venta emitidas desde tu sistema NUMMEROS.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+<section class="sec blanco" id="preguntas">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Preguntas frecuentes</div>
       <h2>Resolvemos tus dudas</h2>
     </div>
-    <div class="nm-faq">
-      <details>
-        <summary>¿Cuánto cuesta un sistema?</summary>
-        <div class="ans">Cada negocio es distinto, así que el precio depende de los módulos que necesites y del nivel de personalización. Tenemos dos caminos: <strong>usar el sistema estándar de tu rubro</strong> (más económico, listo para usar) o <strong>personalizarlo</strong> con tu marca, procesos y funciones específicas (tiene un costo adicional). Muy pronto lanzaremos planes de suscripción mensual y anual. Escríbenos por WhatsApp y te hacemos una cotización sin compromiso.</div>
-      </details>
-      <details>
-        <summary>¿Cuánto tarda la implementación?</summary>
-        <div class="ans">Si usas un sistema estándar que ya tenemos por rubro, la puesta en marcha es muy rápida. Si necesitas algo personalizado, el proceso es de <strong>aproximadamente 2 semanas</strong>: la primera semana recopilamos tu información, entendemos tu operación y te enviamos una demo; la segunda semana aplicamos tus comentarios, ajustes y observaciones, y luego te lo entregamos listo para usar.</div>
-      </details>
-      <details>
-        <summary>¿Funciona en celular y tablet?</summary>
-        <div class="ans">Sí. Nuestros sistemas funcionan como una página web, así que puedes acceder desde <strong>cualquier dispositivo</strong>: celular, tablet, laptop o PC. Solo necesitas conexión a internet. Todo funciona en la nube, así que las actualizaciones y mejoras llegan al instante sin que tengas que instalar nada.</div>
-      </details>
-      <details>
-        <summary>¿Necesito saber de tecnología?</summary>
-        <div class="ans">No, para nada. Nosotros nos encargamos de todo lo técnico. Tú solo necesitas decirnos cómo trabajas y qué te gustaría resolver. Si tienes una referencia visual (una captura, una imagen de Google, un ejemplo de otro sistema), mucho mejor: lo usamos como base para tu sistema.</div>
-      </details>
-      <details>
-        <summary>¿Qué pasa si mi negocio crece?</summary>
-        <div class="ans">Estamos preparados para eso. Si empiezas con un sistema estándar, puedes pasar a uno personalizado cuando quieras. Si creces aún más, hacemos actualizaciones adicionales (con costo aparte según lo que necesites). Y si en algún momento decides migrar a otro sistema, puedes <strong>exportar toda tu información a Excel o CSV</strong> sin problemas. Tu información siempre es tuya.</div>
-      </details>
-      <details>
-        <summary>¿Mis datos están seguros?</summary>
-        <div class="ans">Tu información es exclusivamente tuya. Nunca la compartimos ni la vendemos a terceros. Trabajamos con accesos individuales (usuario y contraseña) y respaldos automáticos para que no pierdas nada. Si algún día quieres irte, te entregamos todos tus datos en formato Excel o CSV.</div>
-      </details>
-      <details>
-        <summary>¿Puedo probar antes de decidir?</summary>
-        <div class="ans">Sí. Te mostramos una <strong>demo funcional</strong> con la información de tu negocio antes de que tomes cualquier decisión. Así puedes ver cómo se sentiría el sistema con tus datos reales.</div>
-      </details>
-      <details>
-        <summary>¿Qué pasa si quiero algo diferente a lo que ofrecen?</summary>
-        <div class="ans">Nos encanta el reto. Usamos formularios y reuniones para entender exactamente lo que necesitas. Si es viable, lo desarrollamos; si no, te lo decimos con honestidad desde el inicio para que no pierdas tiempo ni dinero.</div>
-      </details>
-      <details>
-        <summary>¿Ofrecen soporte después de la entrega?</summary>
-        <div class="ans">Sí. Te capacitamos para que sepas usar el sistema y te acompañamos después de la entrega. Estamos en Santa Cruz de la Sierra y hablamos tu mismo idioma. Puedes escribirnos por WhatsApp cuando tengas dudas o necesites ayuda.</div>
-      </details>
-      <details>
-        <summary>¿Puedo migrar desde otro sistema que ya tengo?</summary>
-        <div class="ans">Sí. Podemos importar tus datos desde Excel, CSV, u otros formatos. Cuéntanos qué tienes y vemos la mejor forma de traerlo a NUMMEROS.</div>
-      </details>
+    <div class="faq">
+      <details><summary>¿Cuánto cuesta un sistema?</summary><div class="ans">Depende de los módulos que necesites y de cuánto lo personalicemos. Hay dos caminos: <strong>usar el sistema estándar de tu rubro</strong> (más económico y listo para usar) o <strong>personalizarlo</strong> con tu marca, tus procesos y funciones propias (con un costo adicional). Pronto lanzaremos planes de suscripción mensual y anual. Escríbenos por WhatsApp y te cotizamos sin compromiso.</div></details>
+      <details><summary>¿Cuánto tarda la implementación?</summary><div class="ans">Con un sistema estándar de tu rubro, la puesta en marcha es muy rápida. Uno personalizado toma <strong>unas 2 semanas</strong>: la primera semana entendemos tu operación y te enviamos una demo; la segunda aplicamos tus comentarios y ajustes, y te lo entregamos listo para usar.</div></details>
+      <details><summary>¿Funciona en celular y tablet?</summary><div class="ans">Sí. Funciona como una página web, así que entras desde <strong>cualquier dispositivo</strong>: celular, tablet, laptop o PC. Solo necesitas internet. Todo está en la nube y las mejoras llegan al instante, sin instalar nada.</div></details>
+      <details><summary>¿Necesito saber de tecnología?</summary><div class="ans">No. Nosotros nos encargamos de todo lo técnico. Tú solo nos cuentas cómo trabajas y qué quieres resolver. Si tienes una referencia visual (una captura, una imagen o un ejemplo de otro sistema), mejor todavía: la usamos como base.</div></details>
+      <details><summary>¿Qué pasa si mi negocio crece?</summary><div class="ans">Estamos preparados. Puedes pasar de un sistema estándar a uno personalizado cuando quieras, y sumar mejoras con costo aparte según lo que necesites. Si algún día decides cambiar de sistema, <strong>exportas toda tu información a Excel o CSV</strong>. Tu información siempre es tuya.</div></details>
+      <details><summary>¿Mis datos están seguros?</summary><div class="ans">Tu información es solo tuya. Nunca la compartimos ni la vendemos. Cada persona entra con su usuario y contraseña, y hacemos respaldos automáticos. Si algún día te vas, te entregamos todos tus datos en Excel o CSV.</div></details>
+      <details><summary>¿Puedo probar antes de decidir?</summary><div class="ans">Sí. Te mostramos una <strong>demo funcional</strong> con la información de tu negocio antes de que decidas, para que veas cómo se siente el sistema con tus datos reales.</div></details>
+      <details><summary>¿Y si quiero algo distinto a lo que ofrecen?</summary><div class="ans">Nos gusta el reto. Con formularios y reuniones entendemos exactamente lo que necesitas. Si es viable, lo desarrollamos; si no, te lo decimos desde el inicio para que no pierdas tiempo ni dinero.</div></details>
+      <details><summary>¿Dan soporte después de la entrega?</summary><div class="ans">Sí. Te capacitamos para que uses el sistema y te acompañamos después de la entrega. Estamos en Santa Cruz de la Sierra; escríbenos por WhatsApp cuando tengas dudas.</div></details>
+      <details><summary>¿Puedo traer mis datos de otro sistema?</summary><div class="ans">Sí. Importamos tus datos desde Excel, CSV u otros formatos. Cuéntanos qué tienes y vemos la mejor forma de traerlo a NUMMEROS.</div></details>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO + FORMULARIO -->
-<section class="nm-sec nm-bg" id="contacto">
-  <div class="nm-wrap">
-    <div class="nm-head mid"><div class="lead">CONTACTO</div><h2>Conversemos sobre tu proyecto</h2></div>
-    <div class="nm-contact-grid">
-      <form class="nm-form" id="nmForm" onsubmit="return nmEnviar(event)">
+<!-- ===================== CONTACTO ===================== -->
+<section class="sec" id="contacto">
+  <div class="wrap">
+    <div class="cab centro">
+      <div class="kicker">Contacto</div>
+      <h2>Conversemos sobre tu empresa</h2>
+    </div>
+    <div class="contacto">
+      <form class="tarjeta form" id="formContacto" novalidate>
         <h3>Cuéntanos qué necesitas</h3>
-        <p class="sub">Llena este formulario y te contactamos por WhatsApp con una propuesta.</p>
-
-        <div class="nm-field">
-          <label for="f-nombre">Tu nombre *</label>
-          <input type="text" id="f-nombre" required placeholder="Ej: Juan Pérez">
-        </div>
-        <div class="nm-field">
-          <label for="f-negocio">Nombre de tu negocio *</label>
-          <input type="text" id="f-negocio" required placeholder="Ej: Farmacia San José">
-        </div>
-        <div class="nm-field">
-          <label for="f-rubro">Rubro *</label>
+        <p class="sub">Llena el formulario y se abre WhatsApp con tu mensaje listo para enviar.</p>
+        <div class="campo"><label for="f-nombre">Tu nombre</label><input type="text" id="f-nombre" autocomplete="name" placeholder="Ej.: Juan Pérez" required></div>
+        <div class="campo"><label for="f-negocio">Nombre de tu negocio</label><input type="text" id="f-negocio" autocomplete="organization" placeholder="Ej.: Farmacia San José" required></div>
+        <div class="campo"><label for="f-rubro">Rubro</label>
           <select id="f-rubro" required>
-            <option value="">Selecciona uno...</option>
-            <option>Restaurante</option>
-            <option>Tienda / Minimarket</option>
-            <option>Farmacia</option>
-            <option>Ferretería</option>
-            <option>Delivery</option>
-            <option>Lavadero de autos</option>
-            <option>Servicios contables</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div class="nm-field">
-          <label>¿Qué sistema te interesa? *</label>
-          <div class="nm-checks">
-            <label><input type="checkbox" name="sistema" value="Punto de Venta"><span>Punto de Venta</span></label>
-            <label><input type="checkbox" name="sistema" value="Contable"><span>Contable</span></label>
-            <label><input type="checkbox" name="sistema" value="Facturación"><span>Facturación</span></label>
-            <label><input type="checkbox" name="sistema" value="Los 3"><span>Los 3</span></label>
-          </div>
-        </div>
-        <div class="nm-field">
-          <label for="f-mensaje">Cuéntanos brevemente tu necesidad</label>
-          <textarea id="f-mensaje" placeholder="Ej: Vendo productos al detalle y necesito controlar stock..."></textarea>
-        </div>
-        <button type="submit" class="nm-btn wa full">
-          <svg width="20" height="20" fill="currentColor"><path d="M10 2a8 8 0 00-6.7 12.4l-.7 3.3 3.4-.7A8 8 0 1010 2zm0 1.3a6.7 6.7 0 11-3.4 12.4l-.3-.2-2 .4.4-2-.2-.3A6.7 6.7 0 0110 3.3z"/></svg>
+            <option value="">Elige uno</option>
+            <option>Restaurante</option><option>Tienda o minimarket</option><option>Lavadero de autos</option><option>Flota o delivery</option>
+            <option>Farmacia</option><option>Ferretería</option><option>Fintech</option><option>Servicios contables</option><option>Otro</option>
+          </select></div>
+        <div class="campo"><span class="lbl">¿Qué sistema te interesa?</span>
+          <div class="marcas">
+            <label><input type="checkbox" name="sistema" id="s-pv" value="Punto de Venta">Punto de Venta</label>
+            <label><input type="checkbox" name="sistema" id="s-co" value="Contable">Contable</label>
+            <label><input type="checkbox" name="sistema" id="s-fa" value="Facturación">Facturación</label>
+            <label><input type="checkbox" name="sistema" id="s-3" value="Los 3">Los 3</label>
+          </div></div>
+        <div class="campo"><label for="f-mensaje">Cuéntanos brevemente tu necesidad</label><textarea id="f-mensaje" placeholder="Ej.: Vendo al detalle y necesito controlar mi stock."></textarea></div>
+        <p class="error" id="f-error" role="alert"></p>
+        <button type="submit" class="btn pri full">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zM8.6 7c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4l-.7-.4-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5.3-.5v-.4L9.4 7.4c-.2-.4-.4-.4-.6-.4h-.2z"/></svg>
           Enviar por WhatsApp
         </button>
       </form>
-
-      <div class="nm-contact-info">
-        <div class="nm-c">
-          <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A16 16 0 012 6a2 2 0 012-2z"/></svg></div>
-          <div><h3>WhatsApp</h3><a href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">690-21969</a></div>
-        </div>
-        <div class="nm-c">
-          <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-          <div><h3>Correo</h3><a href="mailto:info@contaxbolivia.com">info@contaxbolivia.com</a></div>
-        </div>
-        <div class="nm-c">
-          <div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 2C7 2 4 5 4 9c0 5 7 11 7 11s7-6 7-11c0-4-3-7-7-7z"/><circle cx="11" cy="9" r="2.5"/></svg></div>
-          <div><h3>Ubicación</h3><p>Santa Cruz de la Sierra, Bolivia</p></div>
-        </div>
+      <div class="info">
+        <div class="tarjeta dato"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span><div><h3>WhatsApp</h3><a href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">690-21969</a></div></div>
+        <div class="tarjeta dato"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><h3>Correo</h3><a href="mailto:info@contaxbolivia.com">info@contaxbolivia.com</a></div></div>
+        <div class="tarjeta dato"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 00-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><h3>Ubicación</h3><p>Santa Cruz de la Sierra, Bolivia</p></div></div>
+        <figure class="foto">
+          <img src="img/clasicos/euclides-lentes.jpg" alt="Escultura de Euclides revisando facturas con lentes" width="928" height="1152" loading="lazy" style="object-position:50% 25%">
+          <figcaption class="nombre"><b>Euclides</b><span>Matemático griego · c. 300 a. C.</span></figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="nm-sec">
-  <div class="nm-wrap">
-    <div class="nm-cta">
-      <h2>¿Listo para tener tu propio sistema?</h2>
-      <p>Cuéntanos qué necesita tu negocio y te mostramos cómo NUMMEROS puede ayudarte.</p>
-      <a class="nm-btn mint" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20empezar%20con%20mi%20sistema" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
+<!-- ===================== LLAMADO FINAL ===================== -->
+<section class="sec blanco">
+  <div class="wrap">
+    <div class="cta">
+      <div class="txt">
+        <div class="kicker">Empieza hoy</div>
+        <h2>¿Listo para tener tu propio sistema?</h2>
+        <p>Cuéntanos qué necesita tu empresa y te mostramos cómo se vería con tus propios números.</p>
+        <div class="ctas">
+          <a class="btn pri" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20quiero%20empezar%20con%20mi%20sistema" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
+          <a class="btn sec2" href="#contacto">Llenar formulario</a>
+        </div>
+      </div>
+      <figure class="foto">
+        <img src="img/clasicos/euclides-compas.jpg" alt="Escultura de Euclides midiendo un gráfico de crecimiento con un compás" width="1376" height="768" loading="lazy" style="object-position:72% 50%">
+        <figcaption class="nombre"><b>Euclides</b><span>Matemático griego · c. 300 a. C.</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
+</main>
 
-<footer class="nm-ftr">
-  <div class="nm-wrap">
-    <div class="nm-foot">
-      <div>
-        <img class="logo-f" src="img/logo-verde.png" alt="NUMMEROS by CONTAX">
-      </div>
-      <div class="legal">
-        Software a medida para pequeños negocios<br>
-        <a href="mailto:info@contaxbolivia.com">info@contaxbolivia.com</a> — WhatsApp 690-21969<br>
-        Santa Cruz de la Sierra, Bolivia
-      </div>
+<!-- ===================== PIE ===================== -->
+<footer class="pie-pag">
+  <div class="wrap">
+    <div>
+      <img class="logo solo-claro" src="img/marca/logo-firma.svg" alt="NUMMEROS by CONTAX" width="230" height="62">
+      <img class="logo solo-oscuro" src="img/marca/logo-firma-claro.svg" alt="NUMMEROS by CONTAX" width="230" height="62">
+      <p class="legal">Sistemas a la medida de tu empresa.<br>
+      <a href="mailto:info@contaxbolivia.com">info@contaxbolivia.com</a> · WhatsApp <a href="https://wa.me/59169021969" target="_blank" rel="noopener">690-21969</a><br>
+      Santa Cruz de la Sierra, Bolivia</p>
     </div>
-    <div class="nm-fb">© 2026 NUMMEROS by CONTAX. Todos los derechos reservados.</div>
+    <div class="teselas" id="teselas" aria-hidden="true"></div>
   </div>
+  <div class="wrap copy">© 2026 NUMMEROS by CONTAX. Todos los derechos reservados.</div>
 </footer>
 
-<!-- WhatsApp FAB -->
-<a class="nm-fab" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n%20sobre%20sus%20sistemas" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg width="30" height="30" fill="currentColor"><path d="M15 3a12 12 0 00-10 18l-1 5 5-1A12 12 0 1015 3zm0 2a10 10 0 11-5 18.7l-.4-.2-3 .6.6-3-.2-.4A10 10 0 0115 5zm-4 4c-.3 0-.6.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 2 3.2 5 4.4c2.5 1 3 .8 3.6.8.6-.1 1.8-.8 2-1.5.3-.7.3-1.3.2-1.4l-.9-.5s-1.4-.7-1.6-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.8-.7-1.4-1.6-1.6-1.9s0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5z"/></svg>
+<!-- Botón de WhatsApp -->
+<a class="fab wa" href="https://wa.me/59169021969?text=Hola%20NUMMEROS%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 1.8a8.2 8.2 0 11-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0112 3.8zM8.6 7c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4l-.7-.4-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5.3-.5v-.4L9.4 7.4c-.2-.4-.4-.4-.6-.4h-.2z"/></svg>
 </a>
 
-<!-- CHAT FAB -->
-<button class="nm-chat-fab" onclick="nmChatToggle()" aria-label="Abrir chat">
-  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" id="nmChatIcon"><path d="M21 11.5a8.4 8.4 0 01-1 4 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-4-1L3 21l1.8-5.4a8.4 8.4 0 01-1-4A8.5 8.5 0 0111.5 3 8.4 8.4 0 0121 11.5z"/></svg>
+<!-- Asistente -->
+<button class="fab chat" id="chatBtn" type="button" aria-label="Abrir el asistente" aria-expanded="false" aria-controls="chatPanel">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.4 8.4 0 01-4-1L3 20l1.2-4.4A8.5 8.5 0 1121 11.5z"/></svg>
 </button>
-
-<!-- CHAT PANEL -->
-<div class="nm-chat-panel" id="nmChatPanel">
-  <div class="nm-chat-head">
-    <div class="avatar">N</div>
-    <div>
-      <h4>Asistente NUMMEROS</h4>
-      <div class="status">En línea</div>
-    </div>
-    <button class="close" onclick="nmChatToggle()" aria-label="Cerrar">×</button>
+<div class="chat-panel" id="chatPanel" hidden>
+  <div class="chat-head">
+    <img src="img/marca/icono.svg" alt="" width="36" height="36">
+    <div><h4>Asistente NUMMEROS</h4><div class="estado">Respuestas al instante</div></div>
+    <button class="cerrar" id="chatCerrar" type="button" aria-label="Cerrar">×</button>
   </div>
-  <div class="nm-chat-body" id="nmChatBody">
-    <div class="nm-msg bot">¡Hola! 👋 Soy el asistente de NUMMEROS. Puedo contarte sobre nuestros sistemas, precios, plazos y más. ¿Qué te gustaría saber?</div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Hola. Soy el asistente de NUMMEROS. Te cuento sobre nuestros sistemas, precios, plazos y más. ¿Qué te gustaría saber?</div>
   </div>
-  <div class="nm-chat-quick">
-    <button onclick="nmQuick('¿Qué sistemas ofrecen?')">Sistemas</button>
-    <button onclick="nmQuick('¿Cuánto cuesta?')">Precios</button>
-    <button onclick="nmQuick('¿Cuánto tarda la implementación?')">Plazos</button>
-    <button onclick="nmQuick('¿Funciona en celular?')">Dispositivos</button>
+  <div class="rapidas">
+    <button type="button" data-q="¿Qué sistemas ofrecen?">Sistemas</button>
+    <button type="button" data-q="¿Cuánto cuesta?">Precios</button>
+    <button type="button" data-q="¿Cuánto tarda la implementación?">Plazos</button>
+    <button type="button" data-q="¿Funciona en celular?">Dispositivos</button>
   </div>
-  <div class="nm-chat-foot">
-    <input type="text" id="nmChatInput" placeholder="Escribe tu pregunta..." onkeypress="if(event.key==='Enter'){nmEnviarChat()}">
-    <button onclick="nmEnviarChat()" aria-label="Enviar">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l17-7-7 17-2-7z"/></svg>
-    </button>
+  <div class="chat-foot">
+    <input type="text" id="chatInput" placeholder="Escribe tu pregunta" aria-label="Escribe tu pregunta">
+    <button type="button" id="chatEnviar" aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l16-8-6 16-2-6z"/></svg></button>
   </div>
 </div>
 
 <script>
 /* ================================================================
-   FORMULARIO DE CONTACTO → Abre WhatsApp con el mensaje armado
+   MODO CLARO / OSCURO
+   Sin elegir, sigue al celular o la computadora. El botón lo cambia.
    ================================================================ */
-function nmEnviar(e){
-  e.preventDefault();
-  const n = document.getElementById('f-nombre').value.trim();
-  const g = document.getElementById('f-negocio').value.trim();
-  const r = document.getElementById('f-rubro').value;
-  const m = document.getElementById('f-mensaje').value.trim();
-  const sistemas = [...document.querySelectorAll('input[name="sistema"]:checked')].map(x=>x.value);
+(function(){
+  const root=document.documentElement, btn=document.getElementById('modo');
+  try{const g=localStorage.getItem('nm-modo'); if(g==='dark'||g==='light') root.setAttribute('data-theme',g);}catch(e){}
+  const oscuro=()=>{const t=root.getAttribute('data-theme'); return t ? t==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;};
+  window.nmOscuro=oscuro;
+  btn.addEventListener('click',()=>{
+    const nuevo=oscuro()?'light':'dark'; root.setAttribute('data-theme',nuevo);
+    try{localStorage.setItem('nm-modo',nuevo);}catch(e){}
+    btn.setAttribute('aria-label', nuevo==='dark'?'Cambiar a modo claro':'Cambiar a modo oscuro');
+    document.dispatchEvent(new Event('nm-modo'));
+  });
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>document.dispatchEvent(new Event('nm-modo')));
+})();
 
-  if(sistemas.length===0){ alert('Por favor selecciona al menos un sistema de interés.'); return false; }
-
-  const texto = `Hola NUMMEROS! 👋\n\n*Nombre:* ${n}\n*Negocio:* ${g}\n*Rubro:* ${r}\n*Sistema(s) de interés:* ${sistemas.join(', ')}\n\n${m ? '*Detalles:* ' + m : ''}`;
-  window.open(`https://wa.me/59169021969?text=${encodeURIComponent(texto)}`, '_blank');
-  return false;
-}
+/* Menú en celular */
+(function(){
+  const b=document.getElementById('burger'), m=document.getElementById('menu');
+  b.addEventListener('click',()=>{const a=m.classList.toggle('abierto'); b.setAttribute('aria-expanded',a);});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('abierto'); b.setAttribute('aria-expanded',false);}));
+})();
 
 /* ================================================================
-   CHATBOT NUMMEROS
-   Respuestas basadas en palabras clave.
-   
-   ⚠️ IMPORTANTE — CONECTAR DEEPSEEK (V4):
-   La API Key de DeepSeek NO debe ir en este archivo por seguridad.
-   La forma correcta es crear una Firebase Cloud Function que:
-     1. Reciba la pregunta del usuario
-     2. Llame a DeepSeek con la API Key guardada como variable de entorno
-     3. Devuelva la respuesta
-   
-   Cuando tengas la Function lista, reemplaza la función nmResponder()
-   de abajo por un fetch a tu endpoint de Firebase.
+   ELEMENTOS DE LA MARCA (copiados del manual de marca)
+   - Íconos en relieve: círculo en relieve, sombra larga en diagonal y filo de luz.
+   - Infografía de pasos en relieve.
+   - Teselas de la N para el pie de página.
+   Se dibujan de nuevo al cambiar entre modo claro y oscuro.
    ================================================================ */
+(function(){
+const N="M0 427 L0 728 L136 728 L136 634 Z M410 0 L410 85 L546 292 L546 0 Z M0 0 L148 0 L410 458.5 L410 341 L546 548 L546 728 L401.71 728 L136 263 L136 379 L0 172 Z";
+const V={950:"#051F20",900:"#0B2B26",800:"#163832",700:"#235347",300:"#8EB69B",100:"#DAF1DE"};
+const RTH={
+ dark:{bg1:"#163832",bg2:"#051F20",b1:"#1F4A40",b2:"#0B2B26",f1:"#DAF1DE",f2:"#7FAE92",rim:"#FFFFFF",rimO:.75,sh:"#000000",shO:.55,ink:"#DAF1DE",muted:"#8EB69B"},
+ light:{bg1:"#FFFFFF",bg2:"#DAF1DE",b1:"#FFFFFF",b2:"#E3F1E7",f1:"#2E6B5B",f2:"#163832",rim:"#FFFFFF",rimO:.95,sh:"#163832",shO:.22,ink:"#163832",muted:"#557363"}
+};
+let RU=0;
+function defs(id,t){return `<linearGradient id="${id}bg" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.bg1}"/><stop offset="1" stop-color="${t.bg2}"/></linearGradient>
+ <linearGradient id="${id}b" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.b1}"/><stop offset="1" stop-color="${t.b2}"/></linearGradient>
+ <linearGradient id="${id}f" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.f1}"/><stop offset="1" stop-color="${t.f2}"/></linearGradient>
+ <linearGradient id="${id}r" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.rim}" stop-opacity="${t.rimO}"/><stop offset=".55" stop-color="${t.rim}" stop-opacity="0"/></linearGradient>
+ <filter id="${id}s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter><filter id="${id}x"><feGaussianBlur stdDeviation="1.6"/></filter>`}
+function plate(id,t,kind,x,y,w,h,r){const sh=kind==="c"?`<circle cx="${x+w/2}" cy="${y+h/2}" r="${w/2}"`:`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"`;
+ return {clip:`<clipPath id="${id}c">${sh}/></clipPath>`,
+  out:`<g filter="url(#${id}s)" opacity="${t.shO*1.3}" transform="translate(-16 22)">${sh} fill="${t.sh}"/></g>${sh} fill="url(#${id}b)"/>${sh} fill="none" stroke="url(#${id}r)" stroke-width="2"/>`}}
+function extrude(id,t,shp,L){let s=`<g clip-path="url(#${id}c)" filter="url(#${id}x)">`;
+ for(let k=L;k>=2;k-=3)s+=`<g transform="translate(${-k} ${k})" opacity="${(t.shO*.28*(1-k/(L+6))).toFixed(3)}">${shp(t.sh)}</g>`;
+ return s+`</g><g transform="translate(-1.6 1.6)">${shp(t.rim)}</g><g opacity="${1-t.rimO+.05}">${shp(t.sh)}</g>${shp(`url(#${id}f)`)}`}
+const RG={
+ reporte:'<path d="M20 82h60M30 82V58M50 82V36M70 82V20"/>',
+ factura:'<path d="M28 14h44v72l-8-6-7 6-7-6-7 6-7-6-8 6z"/><path d="M40 34h20M40 50h20"/>',
+ inventario:'<path d="M18 34l32-16 32 16v36l-32 16-32-16z"/><path d="M18 34l32 16 32-16M50 50v36"/>',
+ equipo:'<circle cx="50" cy="34" r="14"/><path d="M22 86c3-18 14-26 28-26s25 8 28 26"/>',
+ celular:'<rect x="30" y="12" width="40" height="76" rx="9"/><path d="M46 74h8"/>',
+ calendario:'<rect x="16" y="24" width="68" height="60" rx="9"/><path d="M16 44h68M34 14v18M66 14v18"/>',
+ aprobado:'<path d="M20 52l20 20 40-42"/>',
+ seguridad:'<rect x="24" y="46" width="52" height="40" rx="9"/><path d="M34 46V34a16 16 0 0 1 32 0v12"/>'
+};
+function icono(name,mode){const t=RTH[mode],id="i"+(RU++),P=plate(id,t,"c",36,36,168,168);
+ const shp=p=>`<g transform="translate(65 65) scale(1.1)" fill="none" stroke="${p}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">${RG[name]}</g>`;
+ return `<svg viewBox="0 0 240 240" aria-hidden="true"><defs>${defs(id,t)}${P.clip}</defs><rect width="240" height="240" fill="url(#${id}bg)"/>${P.out}${extrude(id,t,shp,90)}</svg>`}
+function pasos(mode){const t=RTH[mode],W=1100,H=330;let s=`<svg viewBox="0 0 ${W} ${H}" aria-hidden="true"><defs>`,o="";const id0="st"+(RU++);
+ s+=`<linearGradient id="${id0}bg" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.bg1}"/><stop offset="1" stop-color="${t.bg2}"/></linearGradient><filter id="${id0}in"><feGaussianBlur stdDeviation="4"/></filter>`;
+ s+=`<linearGradient id="${id0}rib" x1="0" x2="1"><stop offset="0" stop-color="#8EB69B"/><stop offset="1" stop-color="#235347"/></linearGradient>`;
+ o+=`<rect width="${W}" height="${H}" fill="url(#${id0}bg)"/><rect x="150" y="104" width="800" height="32" rx="16" fill="${t.b2}"/><rect x="150" y="104" width="800" height="32" rx="16" fill="none" stroke="${t.sh}" stroke-opacity="${t.shO}" stroke-width="6" filter="url(#${id0}in)"/><rect x="150" y="113" width="800" height="14" rx="7" fill="url(#${id0}rib)"/>`;
+ [["01","Conocemos","Tu operación y tus números"],["02","Diseñamos","El sistema con tu equipo"],["03","Probamos","Con datos reales"],["04","Acompañamos","Soporte y mejoras"]].forEach(([n,a,b],i)=>{const cx=150+i*(800/3),id="st"+(RU++),P=plate(id,t,"c",cx-62,58,124,124);s+=defs(id,t)+P.clip;
+  const shp=p=>`<text x="${cx}" y="140" text-anchor="middle" font-family="Akshar,sans-serif" font-weight="700" font-size="50" fill="${p}">${n}</text>`;
+  o+=P.out+extrude(id,t,shp,46)+`<text x="${cx}" y="236" text-anchor="middle" font-family="Akshar,sans-serif" font-weight="700" font-size="27" fill="${t.ink}">${a}</text><text x="${cx}" y="266" text-anchor="middle" font-family="Questrial,sans-serif" font-size="16" fill="${t.muted}">${b}</text>`});
+ return s+`</defs>${o}</svg>`}
+/* Teselas de la N, igual que la portada del manual (4 x 2) */
+function teselas(){const C=[[700,100],[100,700],[800,300],[300,950],[300,800],[800,100],[700,300],[100,800]];
+ let t='<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">';
+ C.forEach(([b,f],i)=>{const x=(i%4)*120,y=Math.floor(i/4)*150;t+=`<rect x="${x}" y="${y}" width="120" height="150" fill="${V[b]}"/><path fill="${V[f]}" transform="translate(${(x+19.05).toFixed(2)} ${(y+20.4).toFixed(2)}) scale(0.15)" d="${N}"/>`});
+ return t+"</svg>"}
+function dibujar(){const m=window.nmOscuro()?"dark":"light";
+ document.querySelectorAll('[data-icono]').forEach(el=>{el.innerHTML=icono(el.dataset.icono,m)});
+ const ps=document.getElementById('pasosSvg'); if(ps) ps.innerHTML=pasos(m);
+}
+document.getElementById('teselas').innerHTML=teselas();
+dibujar();
+document.addEventListener('nm-modo',dibujar);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(dibujar);
+})();
 
-const nmRespuestas = [
-  { keys:['precio','costo','cuánto','cuanto','tarifa','vale','cobran'], resp:'Cada negocio es distinto, por eso no tenemos precios fijos. Tenemos sistemas estándar por rubro (más económicos) y personalizados (con tu marca y procesos). Muy pronto lanzamos planes de suscripción mensual y anual. ¿Te gustaría que te cotice un humano? Escríbenos al 690-21969 📲' },
-  { keys:['sistema','sistemas','ofrecen','tienen'], resp:'Tenemos 3 sistemas principales:\n\n🛒 *Punto de Venta:* cobros, inventario, arqueos, reportes.\n📊 *Contable:* ingresos, egresos, conciliaciones, reportes.\n🧾 *Facturación:* en desarrollo, pronto disponible.\n\nPuedes usar uno solo o combinarlos según tu negocio. ¿Cuál te interesa?' },
-  { keys:['punto','venta','pos','caja','cobrar','cobro'], resp:'El *Punto de Venta* te permite cobrar desde celular, tablet o PC, con control de inventario, arqueos de caja, reportes y envío de recibos por correo. Ideal para tiendas, restaurantes y locales con venta diaria. ¿Quieres una demo?' },
-  { keys:['contab','contable','contabilidad','impuesto','financ'], resp:'El *Sistema Contable* registra ingresos y egresos, hace conciliaciones bancarias y genera reportes listos para tus declaraciones. Perfecto si ya tienes ventas y necesitas orden contable.' },
-  { keys:['factura','facturac','nota'], resp:'El *Sistema de Facturación* está actualmente en desarrollo 🚧. Permitirá emitir facturas y notas de venta desde el mismo sistema, con correlativos automáticos e historial. ¿Te aviso cuando esté listo?' },
-  { keys:['tiempo','tarda','demora','implementa','cuándo','cuando'], resp:'La implementación depende de lo que necesites:\n\n⚡ *Sistema estándar:* muy rápido, ya lo tenemos armado.\n🎨 *Personalizado:* aproximadamente *2 semanas* — 1 semana para recopilar info y mostrarte la demo, 1 semana para ajustes y entrega.' },
-  { keys:['celular','tablet','dispositivo','computador','pc','laptop','móvil','movil'], resp:'¡Sí! Funciona en *cualquier dispositivo*: celular, tablet, laptop o PC. Solo necesitas internet. Todo está en la nube, así que las actualizaciones llegan al instante sin instalar nada.' },
-  { keys:['conocimiento','tecnolog','aprender','difícil','dificil','complicad'], resp:'No necesitas saber nada de tecnología 😌. Nosotros nos encargamos de todo. Tú solo dinos cómo trabajas. Si tienes una referencia visual (captura, ejemplo), mucho mejor.' },
-  { keys:['crecer','crecimiento','grande','migrar','migra'], resp:'Si creces, puedes pasar de un sistema estándar a uno personalizado. Y si algún día quieres cambiar de sistema, puedes exportar toda tu info en Excel o CSV. Tu información siempre es tuya 💚.' },
-  { keys:['seguro','seguridad','datos','información','informacion','privacidad'], resp:'Tu información es 100% tuya. Nunca la compartimos ni vendemos. Tienes acceso con usuario y contraseña, respaldos automáticos y puedes exportar tus datos cuando quieras.' },
-  { keys:['probar','demo','muestra'], resp:'¡Claro! Te mostramos una *demo funcional* con la info de tu negocio antes de que decidas. Así ves cómo se sentiría tu sistema con tus datos reales. ¿Te agendo una?' },
-  { keys:['soporte','ayuda','problema','después','despues'], resp:'Sí, damos soporte después de la entrega. Estamos en Santa Cruz y hablamos tu idioma. Puedes escribirnos por WhatsApp cuando necesites.' },
-  { keys:['rubro','negocio','tipo','restaurant','tienda','farmacia','ferreter'], resp:'Trabajamos con restaurantes, tiendas, farmacias, ferreterías y más 🍽️🛒💊🔧. Ya tenemos experiencia con CONTAX, Memphis, SushiFlash, MTG Delivery, Junkers Car Wash y PE$O.' },
-  { keys:['hola','buenas','hey','saludo','qué tal','que tal'], resp:'¡Hola! 👋 ¿En qué puedo ayudarte? Puedo contarte sobre nuestros sistemas, precios, plazos o agendarte una demo.' },
-  { keys:['gracias','gracia','ok','perfecto','genial'], resp:'¡Con gusto! 😊 Si quieres avanzar, escríbenos por WhatsApp al 690-21969 o llena el formulario de la página.' },
-  { keys:['humano','persona','hablar','contacto','whatsapp','llamar'], resp:'¡Claro! Escríbenos directo por WhatsApp al *690-21969* 📲 o al correo info@contaxbolivia.com. Un humano te atenderá con gusto.' },
-  { keys:['próxim','proxim','futuro','viene','nuevo'], resp:'Estamos trabajando en:\n\n📱 App Android (APK)\n💬 CRM para WhatsApp\n🧾 Sistema de Facturación\n\n¡Poco a poco sumamos más herramientas! 🚀' },
+/* ================================================================
+   FORMULARIO DE CONTACTO → abre WhatsApp con el mensaje armado
+   ================================================================ */
+document.getElementById('formContacto').addEventListener('submit',function(e){
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const err=document.getElementById('f-error');
+  const sistemas=[...document.querySelectorAll('input[name="sistema"]:checked')].map(x=>x.value);
+  if(!v('f-nombre')||!v('f-negocio')||!v('f-rubro')){err.textContent='Completa tu nombre, el nombre de tu negocio y el rubro.';return;}
+  if(!sistemas.length){err.textContent='Elige al menos un sistema que te interese.';return;}
+  err.textContent='';
+  const texto=`Hola NUMMEROS.\n\n*Nombre:* ${v('f-nombre')}\n*Negocio:* ${v('f-negocio')}\n*Rubro:* ${v('f-rubro')}\n*Sistema(s) de interés:* ${sistemas.join(', ')}`+(v('f-mensaje')?`\n\n*Detalles:* ${v('f-mensaje')}`:'');
+  window.open(`https://wa.me/59169021969?text=${encodeURIComponent(texto)}`,'_blank');
+});
+
+/* ================================================================
+   ASISTENTE NUMMEROS
+   Responde según palabras clave.
+
+   IMPORTANTE — CONECTAR DEEPSEEK:
+   La API Key de DeepSeek NO debe ir en este archivo (cualquiera podría verla).
+   Lo correcto es una Firebase Cloud Function que reciba la pregunta,
+   llame a DeepSeek con la API Key guardada como variable de entorno
+   y devuelva la respuesta. Cuando la tengas, reemplaza nmResponder()
+   por un fetch a esa función.
+   ================================================================ */
+const nmRespuestas=[
+  {keys:['precio','costo','cuánto','cuanto','tarifa','vale','cobran'],resp:'Cada negocio es distinto, por eso cotizamos según lo que necesitas. Hay sistemas estándar por rubro (más económicos) y personalizados (con tu marca y tus procesos). Pronto lanzamos planes de suscripción mensual y anual. Para una cotización, escríbenos al *690-21969*.'},
+  {keys:['sistema','sistemas','ofrecen','tienen'],resp:'Tenemos 3 sistemas:\n\n*Punto de Venta:* cobros, inventario, arqueos y reportes.\n*Contable:* ingresos, egresos, conciliaciones y reportes.\n*Facturación:* en desarrollo, muy pronto.\n\nPuedes usar uno solo o combinarlos. ¿Cuál te interesa?'},
+  {keys:['punto','venta','pos','caja','cobrar','cobro'],resp:'El *Punto de Venta* te deja cobrar desde el celular, la tablet o la PC, con inventario, arqueos de caja, reportes y recibos por correo. Ideal para tiendas, restaurantes y locales con venta diaria. ¿Quieres una demo?'},
+  {keys:['contab','contable','contabilidad','impuesto','financ'],resp:'El *Sistema Contable* registra ingresos y egresos, hace conciliaciones bancarias y prepara reportes para tus declaraciones. Es para negocios con ventas que necesitan orden contable.'},
+  {keys:['factura','facturac','nota'],resp:'El *Sistema de Facturación* está en desarrollo. Va a emitir facturas y notas de venta desde el mismo sistema, con correlativos automáticos e historial. ¿Quieres que te avisemos cuando esté listo?'},
+  {keys:['tiempo','tarda','demora','implementa','cuándo','cuando'],resp:'Depende de lo que necesites:\n\n*Sistema estándar:* muy rápido, ya lo tenemos armado.\n*Personalizado:* unas *2 semanas*. La primera recopilamos tu información y te mostramos la demo; la segunda hacemos los ajustes y te lo entregamos.'},
+  {keys:['celular','tablet','dispositivo','computador','pc','laptop','móvil','movil'],resp:'Sí. Funciona en *cualquier dispositivo*: celular, tablet, laptop o PC. Solo necesitas internet. Todo está en la nube y las mejoras llegan al instante, sin instalar nada.'},
+  {keys:['conocimiento','tecnolog','aprender','difícil','dificil','complicad'],resp:'No necesitas saber de tecnología. Nosotros nos encargamos de todo; tú solo nos cuentas cómo trabajas. Si tienes una referencia visual (una captura o un ejemplo), mejor todavía.'},
+  {keys:['crecer','crecimiento','grande','migrar','migra'],resp:'Si creces, pasas de un sistema estándar a uno personalizado. Y si algún día quieres cambiar de sistema, exportas toda tu información en Excel o CSV. Tu información siempre es tuya.'},
+  {keys:['seguro','seguridad','datos','información','informacion','privacidad'],resp:'Tu información es solo tuya. Nunca la compartimos ni la vendemos. Entras con usuario y contraseña, hay respaldos automáticos y exportas tus datos cuando quieras.'},
+  {keys:['probar','demo','muestra'],resp:'Claro. Te mostramos una *demo funcional* con la información de tu negocio antes de que decidas. Escríbenos al *690-21969* y la agendamos.'},
+  {keys:['soporte','ayuda','problema','después','despues'],resp:'Sí, damos soporte después de la entrega. Estamos en Santa Cruz de la Sierra. Escríbenos por WhatsApp cuando lo necesites.'},
+  {keys:['rubro','negocio','tipo','restaurant','tienda','farmacia','ferreter','lavadero','delivery','flota'],resp:'Trabajamos con restaurantes, tiendas, lavaderos de autos, flotas y delivery, farmacias, ferreterías, fintech y servicios contables. Ya confían en nosotros Memphis, SushiFlash, MTG Delivery, Junkers Car Wash y PE$O.'},
+  {keys:['hola','buenas','hey','saludo','qué tal','que tal'],resp:'Hola. ¿En qué te ayudo? Te cuento sobre nuestros sistemas, precios y plazos, o te ayudo a pedir una demo.'},
+  {keys:['gracias','gracia','ok','perfecto','genial'],resp:'Con gusto. Si quieres avanzar, escríbenos por WhatsApp al *690-21969* o llena el formulario de la página.'},
+  {keys:['humano','persona','hablar','contacto','whatsapp','llamar'],resp:'Escríbenos directo por WhatsApp al *690-21969* o al correo info@contaxbolivia.com. Una persona del equipo te atiende.'},
+  {keys:['próxim','proxim','futuro','viene','nuevo'],resp:'Estamos trabajando en:\n\n- App Android (APK)\n- CRM para WhatsApp\n- Sistema de Facturación'}
 ];
-
-function nmResponder(pregunta){
-  const p = pregunta.toLowerCase().trim();
-  for(const r of nmRespuestas){
-    if(r.keys.some(k => p.includes(k))) return r.resp;
-  }
-  return 'Hmm, no estoy seguro de eso 🤔. Puedo ayudarte con:\n\n• Nuestros 3 sistemas\n• Precios y plazos\n• Cómo funciona en tu negocio\n\nO si prefieres, escríbenos por WhatsApp al *690-21969* y un humano te atiende.';
-}
-
-function nmChatToggle(){
-  document.getElementById('nmChatPanel').classList.toggle('open');
-}
-function nmQuick(txt){
-  document.getElementById('nmChatInput').value = txt;
-  nmEnviarChat();
-}
-function nmEnviarChat(){
-  const input = document.getElementById('nmChatInput');
-  const txt = input.value.trim();
-  if(!txt) return;
-  const body = document.getElementById('nmChatBody');
-  body.insertAdjacentHTML('beforeend', `<div class="nm-msg user">${txt.replace(/</g,'&lt;')}</div>`);
-  input.value = '';
-  body.scrollTop = body.scrollHeight;
-
-  // Typing indicator
-  const typing = document.createElement('div');
-  typing.className = 'nm-typing';
-  typing.innerHTML = '<span></span><span></span><span></span>';
-  body.appendChild(typing);
-  body.scrollTop = body.scrollHeight;
-
-  setTimeout(()=>{
-    typing.remove();
-    const respuesta = nmResponder(txt);
-    const html = respuesta.replace(/\n/g,'<br>').replace(/\*(.+?)\*/g,'<strong>$1</strong>');
-    body.insertAdjacentHTML('beforeend', `<div class="nm-msg bot">${html}</div>`);
-    body.scrollTop = body.scrollHeight;
-  }, 700);
-}
+function nmResponder(p){p=p.toLowerCase().trim();for(const r of nmRespuestas){if(r.keys.some(k=>p.includes(k)))return r.resp;}
+  return 'No tengo esa respuesta todavía. Te puedo ayudar con:\n\n- Nuestros 3 sistemas\n- Precios y plazos\n- Cómo funciona en tu negocio\n\nO escríbenos por WhatsApp al *690-21969* y una persona del equipo te atiende.';}
+(function(){
+  const panel=document.getElementById('chatPanel'), btn=document.getElementById('chatBtn'), body=document.getElementById('chatBody'), input=document.getElementById('chatInput');
+  const abrir=v=>{panel.hidden=!v;btn.setAttribute('aria-expanded',v);if(v)input.focus();};
+  btn.addEventListener('click',()=>abrir(panel.hidden));
+  document.getElementById('chatCerrar').addEventListener('click',()=>abrir(false));
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  function enviar(txt){txt=(txt||input.value).trim();if(!txt)return;
+    body.insertAdjacentHTML('beforeend',`<div class="msg yo">${esc(txt)}</div>`);input.value='';
+    const t=document.createElement('div');t.className='escribiendo';t.innerHTML='<span></span><span></span><span></span>';body.appendChild(t);body.scrollTop=body.scrollHeight;
+    setTimeout(()=>{t.remove();const h=esc(nmResponder(txt)).replace(/\n/g,'<br>').replace(/\*(.+?)\*/g,'<strong>$1</strong>');
+      body.insertAdjacentHTML('beforeend',`<div class="msg bot">${h}</div>`);body.scrollTop=body.scrollHeight;},600);}
+  document.getElementById('chatEnviar').addEventListener('click',()=>enviar());
+  input.addEventListener('keydown',e=>{if(e.key==='Enter')enviar();});
+  document.querySelectorAll('.rapidas button').forEach(b=>b.addEventListener('click',()=>enviar(b.dataset.q)));
+})();
 </script>
-
 </body>
 </html>
